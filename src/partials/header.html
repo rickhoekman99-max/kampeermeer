@@ -1,9 +1,91 @@
+<a class="skip-link" href="#main">Direct naar de inhoud</a>
 <!-- @include topbar -->
-<header class="site-header">
-  <a href="/" data-nav="/">Home</a>
-  <a href="/werkplaats/" data-nav="/werkplaats/">Werkplaats</a>
-  <a href="/verhuur/" data-nav="/verhuur/">Verhuur</a>
-  <a href="/afspraak/" data-nav="/afspraak/">Afspraak maken</a>
-  <a href="/contact/" data-nav="/contact/">Contact</a>
+<header class="site-header" data-header>
+  <div class="container site-header__inner">
+    <a href="/" class="site-header__logo" aria-label="Kampeer &amp; Meer, naar de homepage">
+      <img src="/assets/logo/logo-kampeermeer.svg" alt="Kampeer &amp; Meer" width="186" height="50">
+    </a>
+
+    <nav class="nav" aria-label="Hoofdmenu">
+      <ul class="nav__pill" role="list">
+        <li><a class="nav__link" href="/" data-nav="/">Home</a></li>
+        <li class="nav__item--sub" data-dropdown>
+          <a class="nav__link" href="/werkplaats/" data-nav="/werkplaats/">Werkplaats</a>
+          <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-werkplaats">
+            <span class="visually-hidden">Toon werkplaatsdiensten</span>
+            <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-chevron-down"/></svg>
+          </button>
+          <div class="nav__dropdown" id="nav-werkplaats">
+            <ul role="list">
+              <li><a href="/werkplaats/apk/" data-nav="/werkplaats/apk/">APK</a></li>
+              <li><a href="/werkplaats/onderhoud/" data-nav="/werkplaats/onderhoud/">Onderhoud</a></li>
+              <li><a href="/werkplaats/aircoservice/" data-nav="/werkplaats/aircoservice/">Aircoservice</a></li>
+              <li><a href="/werkplaats/bandenservice/" data-nav="/werkplaats/bandenservice/">Bandenservice</a></li>
+              <li><a href="/werkplaats/storing-diagnose/" data-nav="/werkplaats/storing-diagnose/">Storing / diagnose</a></li>
+              <li><a href="/werkplaats/accessoire-opbouw/" data-nav="/werkplaats/accessoire-opbouw/">Accessoire-opbouw</a></li>
+              <li><a href="/werkplaats/schadeherstel/" data-nav="/werkplaats/schadeherstel/">Schadeherstel</a></li>
+            </ul>
+            <a class="nav__dropdown-foot" href="/tarieven/" data-nav="/tarieven/">
+              Tarieven bekijken
+              <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg>
+            </a>
+          </div>
+        </li>
+        <li><a class="nav__link" href="/verhuur/" data-nav="/verhuur/">Verhuur</a></li>
+        <li><a class="nav__link" href="/contact/" data-nav="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a href="/afspraak/" class="btn btn--primary site-header__cta" data-nav="/afspraak/">
+      Afspraak maken
+      <span class="btn__dot" aria-hidden="true"><svg class="icon"><use href="/assets/img/icons.svg#i-arrow-up-right"/></svg></span>
+    </a>
+
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-open>
+      <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-menu"/></svg>
+      <span>Menu</span>
+    </button>
+  </div>
 </header>
-<!-- Header: wordt uitgewerkt in fase 1 -->
+
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <div class="mobile-menu__top">
+    <a href="/" class="site-header__logo">
+      <img src="/assets/logo/logo-kampeermeer.svg" alt="Kampeer &amp; Meer" width="186" height="50">
+    </a>
+    <button class="menu-btn" type="button" data-menu-close>
+      <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-x"/></svg>
+      <span>Sluiten</span>
+    </button>
+  </div>
+  <nav class="mobile-menu__nav" aria-label="Mobiel menu">
+    <ul role="list">
+      <li><a href="/" data-nav="/">Home</a></li>
+      <li>
+        <a href="/werkplaats/" data-nav="/werkplaats/">Werkplaats</a>
+        <ul class="mobile-menu__sub" role="list">
+          <li><a href="/werkplaats/apk/" data-nav="/werkplaats/apk/">APK</a></li>
+          <li><a href="/werkplaats/onderhoud/" data-nav="/werkplaats/onderhoud/">Onderhoud</a></li>
+          <li><a href="/werkplaats/aircoservice/" data-nav="/werkplaats/aircoservice/">Aircoservice</a></li>
+          <li><a href="/werkplaats/bandenservice/" data-nav="/werkplaats/bandenservice/">Bandenservice</a></li>
+          <li><a href="/werkplaats/storing-diagnose/" data-nav="/werkplaats/storing-diagnose/">Storing / diagnose</a></li>
+          <li><a href="/werkplaats/accessoire-opbouw/" data-nav="/werkplaats/accessoire-opbouw/">Accessoire-opbouw</a></li>
+          <li><a href="/werkplaats/schadeherstel/" data-nav="/werkplaats/schadeherstel/">Schadeherstel</a></li>
+          <li><a href="/tarieven/" data-nav="/tarieven/">Tarieven</a></li>
+        </ul>
+      </li>
+      <li><a href="/verhuur/" data-nav="/verhuur/">Verhuur</a></li>
+      <li><a href="/contact/" data-nav="/contact/">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="mobile-menu__foot">
+    <a href="/afspraak/" class="btn btn--primary btn--block">
+      Afspraak maken
+      <span class="btn__dot" aria-hidden="true"><svg class="icon"><use href="/assets/img/icons.svg#i-arrow-up-right"/></svg></span>
+    </a>
+    <div class="mobile-menu__contact">
+      <a href="tel:+31113405050"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-phone"/></svg> 0113-40 50 50</a>
+      <a href="https://wa.me/31113382810" rel="noopener"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-whatsapp"/></svg> WhatsApp</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Styleguide — Kampeer &amp; Meer</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preload" href="/assets/fonts/inter-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/inter-tight-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <link rel="icon" href="/assets/logo/logo-kampeermeer.svg" type="image/svg+xml">
+</head>
+<body>
+<!-- @include header -->
+
+<main id="main">
+
+  <section class="sg-intro container">
+    <span class="eyebrow eyebrow--pill">Intern</span>
+    <h1 style="margin-top: var(--space-4)">Styleguide</h1>
+    <p>Alle bouwstenen van de nieuwe kampeermeer.com op één pagina. Foto's zijn tijdelijke placeholders. Deze pagina wordt niet geïndexeerd.</p>
+    <ul class="sg-toc" role="list">
+      <li><a href="#tokens">Kleuren &amp; type</a></li>
+      <li><a href="#knoppen">Knoppen</a></li>
+      <li><a href="#labels">Labels &amp; koppen</a></li>
+      <li><a href="#hero">Hero home</a></li>
+      <li><a href="#subhero">Hero subpagina</a></li>
+      <li><a href="#stats">Statistieken</a></li>
+      <li><a href="#trio">Kaartenrij</a></li>
+      <li><a href="#bento">Bento</a></li>
+      <li><a href="#diensten">Dienstkaarten</a></li>
+      <li><a href="#verhuur">Verhuurkaart</a></li>
+      <li><a href="#tarieven">Tarieventabel</a></li>
+      <li><a href="#keurmerken">Keurmerken</a></li>
+      <li><a href="#overig">Vinkjes &amp; uitgelicht</a></li>
+      <li><a href="#cta">CTA-band</a></li>
+      <li><a href="#footerlogo">Footerlogo: varianten</a></li>
+    </ul>
+  </section>
+
+  <!-- Kleuren en typografie -->
+  <section class="sg-block" id="tokens">
+    <div class="container">
+      <h2>Kleuren &amp; typografie</h2>
+      <div class="sg-swatches">
+        <div class="sg-swatch"><div style="background: var(--brand-primary)"></div><p><strong>Primary</strong><br><code>#F7C548</code></p></div>
+        <div class="sg-swatch"><div style="background: var(--brand-dark)"></div><p><strong>Dark</strong><br><code>#0E3B26</code></p></div>
+        <div class="sg-swatch"><div style="background: var(--brand-secondary)"></div><p><strong>Secondary</strong><br><code>#095E34</code></p></div>
+        <div class="sg-swatch"><div style="background: var(--brand-tint)"></div><p><strong>Tint</strong><br><code>#FEF6DD</code></p></div>
+        <div class="sg-swatch"><div style="background: var(--brand-ink)"></div><p><strong>Accenttekst</strong><br><code>#8A6508</code></p></div>
+        <div class="sg-swatch"><div style="background: var(--ink)"></div><p><strong>Ink</strong><br><code>#1B1F24</code></p></div>
+        <div class="sg-swatch"><div style="background: var(--ink-muted)"></div><p><strong>Ink muted</strong><br><code>#6B7280</code></p></div>
+        <div class="sg-swatch"><div style="background: var(--surface-alt)"></div><p><strong>Surface alt</strong><br><code>#F4F5F2</code></p></div>
+      </div>
+
+      <div class="sg-type" style="margin-top: var(--space-8)">
+        <h1>H1 · Zorgeloos kamperen begint hier</h1>
+        <h2>H2 · Een werkplaats voor alle merken</h2>
+        <h3>H3 · Onderhoudsbeurt caravan</h3>
+        <p class="lead">Lead · Kampeer &amp; Meer is onderdeel van Autobedrijf Lokerse. Wij zijn een energiek familiebedrijf met inmiddels bijna 60 jaar ervaring.</p>
+        <p>Body (Inter, min. 17px, regelhoogte 1,6) · Eigenaar Martijn en zijn vrouw Klazien Lokerse zijn gedreven kampeerders. Zij weten uit ervaring de plezier en rust die het kamperen met zich meebrengt. <a href="#tokens">Dit is een tekstlink.</a></p>
+        <p><span class="stat__value">60</span><span class="small muted-text">Cijfers in statistiekkaarten: Fraunces</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Knoppen -->
+  <section class="sg-block" id="knoppen">
+    <div class="container">
+      <h2>Knoppen</h2>
+      <div class="btn-row">
+        <a href="/afspraak/" class="btn btn--primary">Afspraak maken <span class="btn__dot" aria-hidden="true"><svg class="icon"><use href="/assets/img/icons.svg#i-arrow-up-right"/></svg></span></a>
+        <a href="/contact/" class="btn btn--secondary">Meer over ons</a>
+        <a href="tel:+31113405050" class="link-arrow">Bel ons terug <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-move-right"/></svg></a>
+        <a href="https://wa.me/31113382810" class="btn btn--whatsapp" rel="noopener"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-whatsapp"/></svg> WhatsApp</a>
+      </div>
+      <div class="sg-demo-dark on-dark btn-row" style="margin-top: var(--space-5)">
+        <a href="/afspraak/" class="btn btn--accent">Verstuur aanvraag</a>
+        <a href="/contact/" class="btn btn--secondary">Secundair op donker</a>
+        <a href="/contact/" class="btn btn--light">Licht</a>
+        <a href="tel:+31113405050" class="link-arrow">Bel ons terug <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-move-right"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 + 5. Sectielabel en tweekleurige kop -->
+  <section class="sg-block" id="labels">
+    <div class="container">
+      <h2>Sectielabels &amp; tweekleurige kop</h2>
+      <div class="btn-row">
+        <span class="eyebrow">Werkplaats</span>
+        <span class="eyebrow eyebrow--pill">Over ons</span>
+        <span class="eyebrow eyebrow--pill eyebrow--icon"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-asterisk"/></svg> Wat we doen</span>
+      </div>
+      <h2 class="h-duo" style="margin-top: var(--space-6); max-width: 24ch">Zorgeloos op pad. <span class="muted">Wij zorgen dat uw caravan of camper klaar is voor vertrek.</span></h2>
+    </div>
+  </section>
+
+  <!-- 6. Hero home -->
+  <section class="sg-block sg-block--full" id="hero">
+    <h2>Hero home</h2>
+    <div class="hero">
+      <div class="hero__card">
+        <div class="hero__media"><div class="ph"><span>Foto: camper of caravan in Zeeuws landschap, rustige lucht</span></div></div>
+        <p class="hero__wordmark" aria-hidden="true">Kampeer<span class="amp">&amp;</span>Meer</p>
+        <div class="hero__foot">
+          <div>
+            <h1>Zorgeloos kamperen begint hier</h1>
+          </div>
+          <p class="hero__intro">Werkplaats, verhuur en kampeershop voor caravan en camper, in Kruiningen.</p>
+          <div class="hero__stats">
+            <div><strong>Bijna 60 jaar</strong><span>familiebedrijf</span></div>
+            <div><strong>BOVAG</strong><span>aangesloten</span></div>
+            <div><strong>Alle merken</strong><span>caravans &amp; campers</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 + 8. Hero subpagina met aanvraagkaart -->
+  <section class="sg-block sg-block--full" id="subhero">
+    <h2>Hero subpagina + aanvraagkaart</h2>
+    <div class="subhero subhero--with-card">
+      <div class="subhero__layout">
+        <div class="subhero__card">
+          <div class="hero__media"><div class="ph"><span>Foto: monteur aan het werk</span></div></div>
+          <div class="subhero__body">
+            <nav class="crumbs" aria-label="Kruimelpad">
+              <ol>
+                <li><a href="/">Home</a></li>
+                <li><a href="/werkplaats/">Werkplaats</a></li>
+                <li><span aria-current="page">APK</span></li>
+              </ol>
+            </nav>
+            <h1>APK voor uw caravan of camper</h1>
+            <p>Kampeer &amp; Meer is een RDW-erkend keuringsstation.</p>
+          </div>
+        </div>
+        <form class="request-card" name="sg-demo" action="#" onsubmit="return false">
+          <h2>Plan uw afspraak</h2>
+          <div class="field"><label for="sg-naam">Naam</label><input id="sg-naam" name="naam" autocomplete="name"></div>
+          <div class="field-grid field-grid--2">
+            <div class="field"><label for="sg-tel">Telefoon</label><input id="sg-tel" name="telefoon" type="tel" autocomplete="tel"></div>
+            <div class="field"><label for="sg-mail">E-mail</label><input id="sg-mail" name="email" type="email" autocomplete="email"></div>
+          </div>
+          <div class="field">
+            <label for="sg-dienst">Dienst</label>
+            <select id="sg-dienst" name="dienst">
+              <option value="apk">APK</option>
+              <option value="onderhoud">Onderhoud</option>
+              <option value="aircoservice">Aircoservice</option>
+            </select>
+          </div>
+          <button class="btn btn--accent btn--block" type="submit">Verstuur aanvraag</button>
+        </form>
+      </div>
+    </div>
+    <div class="container">
+      <p class="sg-note">Zonder aanvraagkaart wordt de kaart lager (ca. 55vh). Op mobiel schuift de aanvraagkaart onder de foto en overlapt hij de onderrand.</p>
+    </div>
+    <div class="subhero" style="margin-top: var(--space-6)">
+      <div class="subhero__card">
+        <div class="hero__media"><div class="ph"><span>Foto: dakkoffer op een auto</span></div></div>
+        <div class="subhero__body">
+          <nav class="crumbs" aria-label="Kruimelpad (voorbeeld)"><ol><li><a href="/">Home</a></li><li><span aria-current="page">Verhuur</span></li></ol></nav>
+          <h1>Dakkoffers en fietsendragers huren in Zeeland</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Statistiekkaarten -->
+  <section class="sg-block" id="stats">
+    <div class="container">
+      <h2>Statistiekkaarten</h2>
+      <div class="stats">
+        <div class="stat" data-reveal><span class="stat__value">±60</span><span class="stat__label">jaar familiebedrijf</span></div>
+        <div class="stat" data-reveal><span class="stat__value">BOVAG</span><span class="stat__label">aangesloten werkplaats</span></div>
+        <div class="stat" data-reveal><span class="stat__value">RDW</span><span class="stat__label">erkend keuringsstation</span></div>
+        <div class="stat" data-reveal><span class="stat__value">Alle</span><span class="stat__label">merken caravans &amp; campers</span></div>
+      </div>
+      <p class="sg-note">Alleen feiten die nu op de site staan. Heeft Rick echte cijfers (bijv. aantal beurten per jaar), dan kunnen die hier in.</p>
+    </div>
+  </section>
+
+  <!-- 10. Driedelige kaartenrij -->
+  <section class="sg-block section--alt section" id="trio" style="border-top: 0">
+    <div class="container">
+      <h2 style="font-size: 1rem; font-family: var(--font-sans); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: var(--space-6)">Driedelige kaartenrij</h2>
+      <div class="trio">
+        <article class="trio-card trio-card--light">
+          <svg class="icon trio-card__icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-wrench"/></svg>
+          <h3><a href="/werkplaats/">Werkplaats</a></h3>
+          <p>APK, onderhoud, banden en airco voor caravans en campers van elk merk.</p>
+          <span class="trio-card__notch"><span class="trio-card__more">Lees meer <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg></span></span>
+        </article>
+        <article class="trio-card trio-card--brand">
+          <svg class="icon trio-card__icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-bike"/></svg>
+          <h3><a href="/verhuur/">Verhuur dakkoffers &amp; fietsendragers</a></h3>
+          <p>Van dakkoffer XL tot een Thule fietsendrager, per dag te huur.</p>
+          <span class="trio-card__notch"><span class="trio-card__more">Lees meer <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg></span></span>
+        </article>
+        <article class="trio-card trio-card--dark">
+          <svg class="icon trio-card__icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-shopping-bag"/></svg>
+          <h3><a href="/contact/">Kampeershop &amp; occasions</a></h3>
+          <p>Kampeerbenodigdheden, Campingaz en gebruikte caravans en campers.</p>
+          <span class="trio-card__notch"><span class="trio-card__more">Lees meer <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg></span></span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Bento -->
+  <section class="sg-block" id="bento">
+    <div class="container">
+      <h2>Bento-grid</h2>
+      <div class="bento">
+        <article class="bento__small">
+          <div class="bento__thumb"><div class="ph"><span>Foto: fietsendrager</span></div></div>
+          <div><h3>Thule fietsendrager</h3><p>Voor 2 fietsen, 13-polige stekker. €10,- per dag.</p></div>
+        </article>
+        <article class="bento__big">
+          <div class="hero__media"><div class="ph"><span>Foto: dakkoffer op auto, onderweg</span></div></div>
+          <span class="bento__badge"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-package"/></svg></span>
+          <h3>Dakkoffers huren vanaf €8,- per dag</h3>
+          <p>Medium, Large of Extra Large: voor een dagje strand of een lange vakantie.</p>
+        </article>
+        <article class="bento__small">
+          <div class="bento__thumb"><div class="ph"><span>Foto: dakkoffer los</span></div></div>
+          <div><h3>Ook voor ski's</h3><p>Large en Extra Large zijn geschikt voor ski's.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. Dienstkaarten -->
+  <section class="sg-block" id="diensten">
+    <div class="container">
+      <h2>Dienstkaarten</h2>
+      <div class="services">
+        <article class="service-card">
+          <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-clipboard-check"/></svg></span>
+          <h3><a href="/werkplaats/apk/">APK</a></h3>
+          <p>RDW-erkend keuringsstation. Keuren kan tot twee maanden voor de vervaldatum.</p>
+          <svg class="icon service-card__arrow" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg>
+        </article>
+        <article class="service-card">
+          <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-wrench"/></svg></span>
+          <h3><a href="/werkplaats/onderhoud/">Onderhoud</a></h3>
+          <p>Onderstel, opbouw, gas, water en stroom gecontroleerd, met onderhoudsrapport.</p>
+          <svg class="icon service-card__arrow" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg>
+        </article>
+        <article class="service-card">
+          <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-snowflake"/></svg></span>
+          <h3><a href="/werkplaats/aircoservice/">Aircoservice</a></h3>
+          <p>Controle en onderhoud van de airco in uw camper.</p>
+          <svg class="icon service-card__arrow" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg>
+        </article>
+        <article class="service-card">
+          <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-tyre"/></svg></span>
+          <h3><a href="/werkplaats/bandenservice/">Bandenservice</a></h3>
+          <p>Banden wisselen en controleren voor caravan en camper.</p>
+          <svg class="icon service-card__arrow" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg>
+        </article>
+      </div>
+      <p class="sg-note">Iconen voor de overige diensten: storing/diagnose <svg class="icon" aria-hidden="true" style="display:inline"><use href="/assets/img/icons.svg#i-gauge"/></svg>, accessoire-opbouw <svg class="icon" aria-hidden="true" style="display:inline"><use href="/assets/img/icons.svg#i-plug"/></svg>, schadeherstel <svg class="icon" aria-hidden="true" style="display:inline"><use href="/assets/img/icons.svg#i-hammer"/></svg>. Teksten worden in fase 3–4 uit /content overgenomen.</p>
+    </div>
+  </section>
+
+  <!-- 13. Verhuurkaart -->
+  <section class="sg-block" id="verhuur">
+    <div class="container">
+      <h2>Verhuurkaart</h2>
+      <div class="rentals" style="max-width: 44rem">
+        <article class="rent-card">
+          <div class="rent-card__media"><div class="ph"><span>Foto: dakkoffer Medium</span></div><span class="rent-card__price">€8,- p/d</span></div>
+          <div class="rent-card__body">
+            <h3>Dakkoffer Medium</h3>
+            <dl class="specs">
+              <dt>Inhoud</dt><dd>300 liter</dd>
+              <dt>Leeggewicht</dt><dd>11 kg</dd>
+              <dt>Max. belading</dt><dd>50 kg</dd>
+              <dt>Geschikt voor ski's</dt><dd>Nee</dd>
+              <dt>L × B × H (buiten)</dt><dd>135 × 78 × 40 cm</dd>
+            </dl>
+            <a href="/verhuur/#reserveren" class="btn btn--primary btn--block">Reserveren <span class="btn__dot" aria-hidden="true"><svg class="icon"><use href="/assets/img/icons.svg#i-arrow-up-right"/></svg></span></a>
+          </div>
+        </article>
+        <article class="rent-card">
+          <div class="rent-card__media"><div class="ph"><span>Foto: Thule fietsendrager</span></div><span class="rent-card__price">€10,- p/d</span></div>
+          <div class="rent-card__body">
+            <h3>Thule fietsendrager</h3>
+            <dl class="specs">
+              <dt>Max. aantal fietsen</dt><dd>2</dd>
+              <dt>Laadvermogen</dt><dd>60 kg</dd>
+              <dt>Max. gewicht fiets</dt><dd>30 kg</dd>
+              <dt>Stekker</dt><dd>13-polig</dd>
+            </dl>
+            <a href="/verhuur/#reserveren" class="btn btn--primary btn--block">Reserveren <span class="btn__dot" aria-hidden="true"><svg class="icon"><use href="/assets/img/icons.svg#i-arrow-up-right"/></svg></span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14. Tarieventabel -->
+  <section class="sg-block" id="tarieven">
+    <div class="container">
+      <h2>Tarieventabel</h2>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Tarieven onderhoud (scrollbaar)">
+        <table class="price-table">
+          <caption>Onderhoud</caption>
+          <thead><tr><th scope="col">Beurt</th><th scope="col">Wat we controleren</th><th scope="col" class="price">Prijs incl. btw</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">BOVAG Onderstelbeurt</th><td>Onderstel, banden, verkeersverlichting</td><td class="price">€ 250,-</td></tr>
+            <tr><th scope="row">BOVAG Onderhoudsbeurt caravan</th><td>Onderstel, banden, verlichting, opbouw, elektra, gas, water, optische vochtcontrole</td><td class="price">€ 325,-</td></tr>
+            <tr><th scope="row">BOVAG Onderhoudsbeurt caravan PLUS</th><td>Uitgebreide beurt <small>Details volgen uit de tarievenpagina</small></td><td class="price">€ 395,-</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 15. Keurmerken -->
+  <section class="sg-block" id="keurmerken">
+    <div class="container">
+      <h2>Keurmerkenrij</h2>
+      <ul class="marks" role="list">
+        <li><span class="mark-ph">BOVAG</span></li>
+        <li><span class="mark-ph">RDW</span></li>
+        <li><span class="mark-ph">Campingaz</span></li>
+      </ul>
+      <p class="sg-note">Placeholders: logo's alleen plaatsen als het gebruik is toegestaan (BOVAG-ledenlogo, Campingaz-dealerlogo).</p>
+    </div>
+  </section>
+
+  <!-- Vinkjeslijst en uitgelichte kaart -->
+  <section class="sg-block" id="overig">
+    <div class="container">
+      <h2>Vinkjeslijst &amp; uitgelichte kaart</h2>
+      <div class="about">
+        <ul class="checklist" role="list">
+          <li><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-check"/></svg> Onderstel en banden</li>
+          <li><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-check"/></svg> Elektra (12V/220V)</li>
+          <li><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-check"/></svg> Gassysteem en watersysteem</li>
+          <li><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-check"/></svg> Optische vochtcontrole</li>
+        </ul>
+        <div class="feature-card">
+          <svg class="icon feature-card__icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-shield-check"/></svg>
+          <div class="stack">
+            <h3>Reparaties alleen na overleg</h3>
+            <p>Reparaties worden pas na overleg en met uw goedkeuring uitgevoerd, zodat u niet voor onverwachte verrassingen komt te staan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 16. CTA-band -->
+  <section class="sg-block" id="cta">
+    <div class="container">
+      <h2>CTA-band</h2>
+      <div class="cta-band on-dark">
+        <div>
+          <h2>Uw caravan of camper klaar voor het seizoen?</h2>
+          <p>Plan online een afspraak of stuur ons een WhatsApp-bericht.</p>
+        </div>
+        <div class="btn-row">
+          <a href="/afspraak/" class="btn btn--accent">Afspraak maken</a>
+          <a href="https://wa.me/31113382810" class="btn btn--secondary" rel="noopener"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-whatsapp"/></svg> WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footerlogo: twee varianten -->
+  <section class="sg-block" id="footerlogo">
+    <div class="container">
+      <h2>Footerlogo: kies een variant</h2>
+      <div class="sg-variants">
+        <div class="sg-variant">
+          <img src="/assets/logo/logo-kampeermeer-wit-footer.svg" alt="Variant A" width="240" height="65">
+          <p><strong style="color: var(--ink-inverse)">A · Wit logo, slogan lichtgroen</strong><br>Slogan in #B9DCC5 i.p.v. #095E34 (dat is op donkergroen onleesbaar). Nu actief in de footer.</p>
+        </div>
+        <div class="sg-variant">
+          <span class="sg-variant__logo-pill"><img src="/assets/logo/logo-kampeermeer.svg" alt="Variant B" width="200" height="54"></span>
+          <p><strong style="color: var(--ink-inverse)">B · Origineel logo op witte kaart</strong><br>Logo blijft exact in de originele kleuren.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sg-block">
+    <div class="container">
+      <h2>Topbar, header, footer en WhatsApp-knop</h2>
+      <p class="sg-note" style="margin-top: 0">Staan bovenaan en onderaan deze pagina (uit <code>src/partials/</code>). Header krimpt bij scrollen; onder 1024px opent “Menu” een schermvullend menu met de afspraakknop onderin.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- @include footer -->
+</body>
+</html>
