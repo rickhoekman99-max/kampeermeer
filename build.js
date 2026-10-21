@@ -7,6 +7,8 @@
  *   (partials mogen zelf ook includes bevatten).
  * - Markeert navigatielinks met data-nav: aria-current="page" op de huidige pagina,
  *   data-current="section" op de bovenliggende sectie (bv. Werkplaats op /werkplaats/apk/).
+ * - Zet de iconensprite (src/assets/img/icons.svg) inline in elke pagina die iconen gebruikt,
+ *   zodat er geen extra request nodig is en iconen nooit los kunnen wegvallen.
  * - Bundelt de CSS uit src/assets/css/ in vaste volgorde tot dist/assets/css/site.css.
  *
  * Gebruik: node build.js
@@ -45,6 +47,20 @@ function markNav(html, url) {
   });
 }
 
+const SPRITE_URL = '/assets/img/icons.svg#';
+let sprite = null;
+function inlineSprite(html) {
+  if (!html.includes(SPRITE_URL)) return html;
+  if (sprite === null) {
+    sprite = fs.readFileSync(path.join(SRC, 'assets', 'img', 'icons.svg'), 'utf8')
+      .replace(/<!--[\s\S]*?-->\s*/g, '')
+      .replace('<svg ', '<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" ');
+  }
+  return html
+    .split(SPRITE_URL).join('#')
+    .replace(/<body([^>]*)>/, (m) => `${m}\n${sprite.trim()}`);
+}
+
 function bundleCss() {
   const dir = path.join(SRC, 'assets', 'css');
   const parts = CSS_ORDER.filter((f) => fs.existsSync(path.join(dir, f)))
@@ -64,7 +80,7 @@ function walk(dir, rel = '') {
     if (entry.isDirectory()) {
       walk(srcPath, relPath);
     } else if (entry.name.endsWith('.html')) {
-      const html = markNav(applyIncludes(fs.readFileSync(srcPath, 'utf8')), pageUrl(relPath));
+      const html = inlineSprite(markNav(applyIncludes(fs.readFileSync(srcPath, 'utf8')), pageUrl(relPath)));
       fs.mkdirSync(path.dirname(outPath), { recursive: true });
       fs.writeFileSync(outPath, html);
       pages++;

@@ -42,3 +42,29 @@
 @media (min-width: 900px) { .split-head { grid-template-columns: 1.4fr 1fr; align-items: end; } }
 
 .section--cta { padding-bottom: 0; }
+
+/* ============ Dienstpagina's ============ */
+.service-layout { display: grid; gap: var(--space-7); }
+.service-layout__main > * + * { margin-top: var(--space-5); }
+.service-layout__main .prose { max-width: 62ch; }
+.service-layout__aside { display: grid; gap: var(--space-5); align-content: start; }
+@media (min-width: 1024px) {
+  .service-layout { grid-template-columns: minmax(0, 1.5fr) minmax(20rem, 1fr); gap: clamp(3rem, 6vw, 6rem); }
+  .service-layout__aside { position: sticky; top: 6rem; }
+}
+.aside-card {
+  display: grid; gap: var(--space-4);
+  padding: clamp(1.5rem, 3vw, 2rem);
+  border-radius: var(--radius-card);
+  background: var(--surface-alt);
+}
+.aside-card h3 { font-size: 1.25rem; }
+.aside-card--tint { background: var(--brand-tint); }
+.aside-card__icon { width: 2.25rem; height: 2.25rem; color: var(--brand-dark); }
+.aside-card .link-arrow { min-height: 0; }
+
+.request-card__alt { margin-top: var(--space-4); text-align: center; font-size: var(--fs-small); color: var(--ink-muted); }
+
+@media (min-width: 900px) { .services--three { grid-template-columns: repeat(3, 1fr); } }
+.split-head .link-arrow { justify-self: start; }
+@media (min-width: 900px) { .split-head > p:has(.link-arrow) { justify-self: end; } }
