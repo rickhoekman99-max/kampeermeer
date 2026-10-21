@@ -30,10 +30,10 @@ FOTOS = {
     'verhuur-thule-koffer': ('verhuur-hero.png',          [960, 1600, 2300], None, 0.5, False),
     'pand-kampeermeer':     ('contact-kampeermeer.png',   [800, 1600, 2300], None, 0.5, False),
     'pand-lokerse':         ('contact-lokerse.png',       [800, 1600, 2400], None, 0.5, False),
-    'product-fietsendrager':     ('verhuur-1.png', [400, 800], 1.0, 0.5, True),
-    'product-dakkoffer-medium':  ('verhuur-2.png', [400, 800], 1.0, 0.5, True),
-    'product-dakkoffer-large':   ('verhuur-3.png', [400, 800], 1.0, 0.5, True),
-    'product-dakkoffer-xl':      ('verhuur-4.png', [400, 800], 1.0, 0.5, True),
+    'product-fietsendrager':     ('verhuur-1.png', [600], None, 0.5, True),
+    'product-dakkoffer-medium':  ('verhuur-2.png', [600], None, 0.5, True),
+    'product-dakkoffer-large':   ('verhuur-3.png', [600], None, 0.5, True),
+    'product-dakkoffer-xl':      ('verhuur-4.png', [600], None, 0.5, True),
 }
 
 
@@ -51,7 +51,7 @@ def crop_ratio(img, ratio, focus_y):
 
 
 def crop_product(img):
-    """Snijd het product uit (linkerdeel, zonder lijn en prijsbadge) en zet het op wit vierkant."""
+    """Snijd het product uit (linkerdeel, zonder lijn en prijsbadge) met een smalle witte rand."""
     g = img.convert('L')
     w, h = g.size
     px = g.load()
@@ -73,9 +73,9 @@ def crop_product(img):
                 break
             for y in range(max(ly - 4, 0), min(ly + 5, prod.height)):
                 ppx[x, y] = (255, 255, 255)
-    side = round(max(prod.size) * 1.18)
-    canvas = Image.new('RGB', (side, side), 'white')
-    canvas.paste(prod, ((side - prod.width) // 2, (side - prod.height) // 2))
+    pad = round(max(prod.size) * 0.05)
+    canvas = Image.new('RGB', (prod.width + 2 * pad, prod.height + 2 * pad), 'white')
+    canvas.paste(prod, (pad, pad))
     return canvas
 
 

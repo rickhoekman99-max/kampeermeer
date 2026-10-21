@@ -127,11 +127,10 @@
 
 /* ============ Verhuur ============ */
 @media (min-width: 700px) { .rentals--four { grid-template-columns: repeat(2, 1fr); } }
-.rentals--four .rent-card__media { aspect-ratio: 16 / 9; }
-.rentals--four .rent-card__media--product img { padding: 6% 10%; }
+.rentals--four .rent-card__media { aspect-ratio: 16 / 7; min-height: 11rem; }
 .rent-card { scroll-margin-top: 6rem; }
 .rent-card__media--product { background: #fff; border-bottom: 1px solid var(--line); }
-.rent-card__media--product img { width: 100%; height: 100%; object-fit: contain; padding: 10%; }
+.rent-card__media--product img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 3.5rem 10% 1.25rem; }
 .compare-table { min-width: 40rem; }
 .compare-table td { font-variant-numeric: tabular-nums; }
 .compare-table tbody tr:first-child td { font-weight: 700; }

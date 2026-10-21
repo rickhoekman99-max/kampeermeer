@@ -493,7 +493,7 @@
   border: 1px solid var(--line);
   overflow: hidden;
 }
-.rent-card__media { position: relative; aspect-ratio: 4 / 3; background: var(--surface-alt); }
+.rent-card__media { position: relative; aspect-ratio: 4 / 3; background: var(--surface-alt); overflow: hidden; }
 .rent-card__media .ph { min-height: 0; }
 .rent-card__price {
   position: absolute; top: var(--space-4); left: var(--space-4);
@@ -508,7 +508,7 @@
 .specs dt, .specs dd { padding: var(--space-2) 0; border-bottom: 1px solid var(--line); }
 .specs dt { color: var(--ink-muted); padding-right: var(--space-4); }
 .specs dd { text-align: right; font-weight: 500; white-space: nowrap; }
-.rent-card .btn { margin-top: auto; }
+.rent-card .btn { margin-top: auto; align-self: flex-end; }
 
 /* ============ 14. Tarieventabel ============ */
 .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: var(--radius-card); border: 1px solid var(--line); }
