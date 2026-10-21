@@ -37,6 +37,14 @@ FOTOS = {
 }
 
 
+# Art direction: vaste uitsneden (x0, y0, x1, y1 in bronpixels) voor mobiel/tablet, met de camper
+# boven het tekstvlak van de hero.
+UITSNEDEN = {
+    'hero-camper-strand-mobiel': ('AdobeStock_222131372.jpeg', [600, 900, 1200], (741, 1395, 2827, 3648)),
+    'hero-camper-strand-tablet': ('AdobeStock_222131372.jpeg', [900, 1400], (380, 1302, 3508, 3648)),
+}
+
+
 def crop_ratio(img, ratio, focus_y):
     w, h = img.size
     if ratio is None:
@@ -89,6 +97,17 @@ def main(src_dir):
         img = Image.open(path)
         img = crop_product(img) if product else crop_ratio(img.convert('RGB'), ratio, focus_y)
         widths = [w for w in widths if w <= img.width] or [img.width]
+        for w in widths:
+            im = img.resize((w, round(img.height * w / img.width)), Image.LANCZOS)
+            im.save(OUT / f'{name}-{w}.avif', quality=55, speed=6)
+            im.save(OUT / f'{name}-{w}.webp', quality=78, method=6)
+        print(f'{name}: {img.width}x{img.height} -> {widths}')
+    for name, (src, widths, box) in UITSNEDEN.items():
+        path = Path(src_dir) / src
+        if not path.exists():
+            print(f'  overgeslagen (niet gevonden): {src}')
+            continue
+        img = Image.open(path).convert('RGB').crop(box)
         for w in widths:
             im = img.resize((w, round(img.height * w / img.width)), Image.LANCZOS)
             im.save(OUT / f'{name}-{w}.avif', quality=55, speed=6)
