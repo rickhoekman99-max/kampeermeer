@@ -6,29 +6,37 @@
  *   --color-accent-dark / secundaire knop ............. rgba(255,226,111) = #FFE26F
  *   tekst / navigatie ................................. rgb(16,16,16)     = #101010
  *   footer-achtergrond ................................ rgb(235,235,235)  = #EBEBEB
- *   logo: tent en "&" ................................. ≈ #DCBC22 (komt overeen met #E2BB20)
- *   logo: woordmerk ................................... ≈ #1C1C1C
  *
- * Contrast (WCAG AA): wit op #E2BB20 = 1.85:1 (onvoldoende) → op merkkleur altijd
- * donkere tekst (--ink op --brand-primary = 8.96:1). Voor goudkleurige tekst op wit
- * --brand-ink gebruiken (5.15:1). --ink-muted op --surface-alt = 4.42:1: alleen voor
- * grote koppen (≥ 24px), niet voor lopende tekst.
+ * Vectorlogo (LOGO zonder achtergrond.pdf, Illustrator):
+ *   tent en "&" ....................................... #DBB926
+ *   woordmerk ......................................... #262324
+ *   slogan "Home is where you park it" ................ #095E34 (donkergroen)
+ *
+ * Feedback Rick (fase 0): primary iets warmer, minder goud, meer zomers.
+ * Voorstel: A "zonnebloem" #F4B13E (tint 38° i.p.v. 48°). Alternatieven:
+ * B "abrikoos" #F39C34, C "zomergeel" #F7C548. Donker: groen uit de slogan.
+ *
+ * Contrast (WCAG AA): wit op --brand-primary = 1.87:1 (onvoldoende) → op merkkleur
+ * altijd donkere tekst (--ink: 8.84:1). Wit op --brand-dark = 12.56:1, primary op
+ * --brand-dark = 6.70:1. Voor oranje-gouden tekst op wit --brand-ink (5.37:1).
+ * --ink-muted op --surface-alt = 4.42:1: alleen voor grote koppen (≥ 24px).
  *
  * VOORSTEL — nog te bevestigen door Rick.
  */
 :root {
   /* Merk */
-  --brand-primary:   #e2bb20; /* goudgeel huidige site: knoppen, accenten, topbar */
-  --brand-secondary: #ffe26f; /* lichtgeel huidige site: secundaire accenten, hover */
-  --brand-dark:      #1c1a14; /* warm antraciet, afgeleid van logo-woordmerk: donkere kaarten, footer, CTA */
-  --brand-tint:      #fbf5de; /* zeer lichte goudtint: statistiekkaarten, kaartachtergronden */
-  --brand-ink:       #866a0e; /* donker goud: goudkleurige tekst/links op wit */
+  --brand-primary:   #f4b13e; /* zonnebloem: knoppen, accenten, topbar */
+  --brand-secondary: #095e34; /* groen uit de logo-slogan */
+  --brand-dark:      #0e3b26; /* diep groen, afgeleid van de slogan: donkere kaarten, footer, CTA */
+  --brand-tint:      #fdf3e1; /* zeer lichte zonnetint: statistiekkaarten, kaartachtergronden */
+  --brand-ink:       #985d10; /* donker oranjegoud: accenttekst/links op wit */
+  --logo-gold:       #dbb926; /* exacte logokleur, alleen voor het logo zelf */
 
   /* Neutraal */
   --ink:             #1b1f24; /* tekst */
   --ink-muted:       #6b7280; /* tweede tint in tweekleurige koppen */
   --ink-inverse:     #ffffff;
-  --ink-inverse-muted: #c9c4b4; /* tekst op --brand-dark */
+  --ink-inverse-muted: #c5d3c9; /* tekst op --brand-dark */
   --surface:         #ffffff;
   --surface-alt:     #f4f5f2; /* sectie-achtergrond, warm lichtgrijs */
   --line:            #e5e7eb;
