@@ -23,7 +23,7 @@
  */
 :root {
   /* Merk */
-  --brand-primary:   #f7c548; /* zomergeel: knoppen, accenten, topbar */
+  --brand-primary:   #f7c548; /* zomergeel: knoppen, accenten, actief menu-item */
   --brand-secondary: #095e34; /* groen uit de logo-slogan */
   --brand-dark:      #0e3b26; /* diep groen, afgeleid van de slogan: donkere kaarten, footer, CTA */
   --brand-tint:      #fef6dd; /* zeer lichte zomertint: statistiekkaarten, kaartachtergronden */
