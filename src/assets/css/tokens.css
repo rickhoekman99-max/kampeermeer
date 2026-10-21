@@ -13,23 +13,21 @@
  *   slogan "Home is where you park it" ................ #095E34 (donkergroen)
  *
  * Feedback Rick (fase 0): primary iets warmer, minder goud, meer zomers.
- * Voorstel: A "zonnebloem" #F4B13E (tint 38° i.p.v. 48°). Alternatieven:
- * B "abrikoos" #F39C34, C "zomergeel" #F7C548. Donker: groen uit de slogan.
+ * Gekozen door Rick: C "zomergeel" #F7C548 (tint 43° i.p.v. 48°).
+ * Donker: groen uit de slogan.
  *
- * Contrast (WCAG AA): wit op --brand-primary = 1.87:1 (onvoldoende) → op merkkleur
- * altijd donkere tekst (--ink: 8.84:1). Wit op --brand-dark = 12.56:1, primary op
- * --brand-dark = 6.70:1. Voor oranje-gouden tekst op wit --brand-ink (5.37:1).
+ * Contrast (WCAG AA): wit op --brand-primary = 1.61:1 (onvoldoende) → op merkkleur
+ * altijd donkere tekst (--ink: 10.28:1). Wit op --brand-dark = 12.56:1, primary op
+ * --brand-dark = 7.79:1. Voor geelgouden tekst op wit --brand-ink (5.32:1).
  * --ink-muted op --surface-alt = 4.42:1: alleen voor grote koppen (≥ 24px).
- *
- * VOORSTEL — nog te bevestigen door Rick.
  */
 :root {
   /* Merk */
-  --brand-primary:   #f4b13e; /* zonnebloem: knoppen, accenten, topbar */
+  --brand-primary:   #f7c548; /* zomergeel: knoppen, accenten, topbar */
   --brand-secondary: #095e34; /* groen uit de logo-slogan */
   --brand-dark:      #0e3b26; /* diep groen, afgeleid van de slogan: donkere kaarten, footer, CTA */
-  --brand-tint:      #fdf3e1; /* zeer lichte zonnetint: statistiekkaarten, kaartachtergronden */
-  --brand-ink:       #985d10; /* donker oranjegoud: accenttekst/links op wit */
+  --brand-tint:      #fef6dd; /* zeer lichte zomertint: statistiekkaarten, kaartachtergronden */
+  --brand-ink:       #8a6508; /* donker geelgoud: accenttekst/links op wit */
   --logo-gold:       #dbb926; /* exacte logokleur, alleen voor het logo zelf */
 
   /* Neutraal */
