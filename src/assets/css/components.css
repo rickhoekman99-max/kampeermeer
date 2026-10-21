@@ -507,7 +507,7 @@
 .specs { display: grid; grid-template-columns: auto 1fr; font-size: var(--fs-small); }
 .specs dt, .specs dd { padding: var(--space-2) 0; border-bottom: 1px solid var(--line); }
 .specs dt { color: var(--ink-muted); padding-right: var(--space-4); }
-.specs dd { text-align: right; font-weight: 500; }
+.specs dd { text-align: right; font-weight: 500; white-space: nowrap; }
 .rent-card .btn { margin-top: auto; }
 
 /* ============ 14. Tarieventabel ============ */
