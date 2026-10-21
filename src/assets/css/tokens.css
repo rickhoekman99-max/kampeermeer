@@ -1,0 +1,79 @@
+/*
+ * Design tokens — kampeermeer.com
+ *
+ * Merkkleuren gemeten op de live site (fase 0, 21-10-2026):
+ *   --color-accent / knoppen / actief menu-item ....... rgba(226,187,32)  = #E2BB20
+ *   --color-accent-dark / secundaire knop ............. rgba(255,226,111) = #FFE26F
+ *   tekst / navigatie ................................. rgb(16,16,16)     = #101010
+ *   footer-achtergrond ................................ rgb(235,235,235)  = #EBEBEB
+ *   logo: tent en "&" ................................. ≈ #DCBC22 (komt overeen met #E2BB20)
+ *   logo: woordmerk ................................... ≈ #1C1C1C
+ *
+ * Contrast (WCAG AA): wit op #E2BB20 = 1.85:1 (onvoldoende) → op merkkleur altijd
+ * donkere tekst (--ink op --brand-primary = 8.96:1). Voor goudkleurige tekst op wit
+ * --brand-ink gebruiken (5.15:1). --ink-muted op --surface-alt = 4.42:1: alleen voor
+ * grote koppen (≥ 24px), niet voor lopende tekst.
+ *
+ * VOORSTEL — nog te bevestigen door Rick.
+ */
+:root {
+  /* Merk */
+  --brand-primary:   #e2bb20; /* goudgeel huidige site: knoppen, accenten, topbar */
+  --brand-secondary: #ffe26f; /* lichtgeel huidige site: secundaire accenten, hover */
+  --brand-dark:      #1c1a14; /* warm antraciet, afgeleid van logo-woordmerk: donkere kaarten, footer, CTA */
+  --brand-tint:      #fbf5de; /* zeer lichte goudtint: statistiekkaarten, kaartachtergronden */
+  --brand-ink:       #866a0e; /* donker goud: goudkleurige tekst/links op wit */
+
+  /* Neutraal */
+  --ink:             #1b1f24; /* tekst */
+  --ink-muted:       #6b7280; /* tweede tint in tweekleurige koppen */
+  --ink-inverse:     #ffffff;
+  --ink-inverse-muted: #c9c4b4; /* tekst op --brand-dark */
+  --surface:         #ffffff;
+  --surface-alt:     #f4f5f2; /* sectie-achtergrond, warm lichtgrijs */
+  --line:            #e5e7eb;
+
+  /* Typografie */
+  --font-sans:    "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Inter Tight", "Inter", system-ui, sans-serif;
+  --font-serif:   "Fraunces", Georgia, "Times New Roman", serif;
+
+  --fs-body:  clamp(1.0625rem, 1rem + 0.2vw, 1.125rem); /* min. 17px */
+  --fs-small: 0.9375rem;
+  --fs-label: 0.8125rem;
+  --fs-h3:    clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --fs-h2:    clamp(1.875rem, 1.4rem + 2vw, 3rem);
+  --fs-h1:    clamp(2.25rem, 1.6rem + 3vw, 4rem);
+  --fs-stat:  clamp(2.5rem, 2rem + 2.5vw, 4rem);
+  --fs-wordmark: clamp(3.5rem, 15vw, 13rem);
+  --lh-body:  1.6;
+  --lh-tight: 1.1;
+  --tracking-tight: -0.02em;
+
+  /* Ruimte */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --section-pad: clamp(4rem, 9vw, 8rem);
+  --gutter: clamp(1rem, 4vw, 2rem);
+  --content-max: 1240px;
+
+  /* Vorm */
+  --radius-card: 20px;
+  --radius-hero: 28px;
+  --radius-pill: 999px;
+  --shadow-soft: 0 10px 30px -12px rgb(28 26 20 / 0.18);
+
+  /* Beweging */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur: 220ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur: 0ms; }
+}
