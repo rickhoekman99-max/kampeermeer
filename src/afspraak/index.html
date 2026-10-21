@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Afspraak maken voor uw caravan of camper · Kampeer &amp; Meer</title>
+  <meta name="description" content="Plan een afspraak voor APK, onderhoud of reparatie van uw caravan of camper bij Kampeer &amp; Meer in Kruiningen.">
+  <link rel="canonical" href="https://kampeermeer.com/afspraak/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Afspraak maken · Kampeer &amp; Meer">
+  <meta property="og:description" content="Plan een afspraak voor APK, onderhoud of reparatie van uw caravan of camper bij Kampeer &amp; Meer in Kruiningen.">
+  <meta property="og:url" content="https://kampeermeer.com/afspraak/">
+  <meta property="og:locale" content="nl_NL">
+  <link rel="preload" href="/assets/fonts/inter-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/inter-tight-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <link rel="icon" href="/assets/logo/logo-kampeermeer.svg" type="image/svg+xml">
+</head>
+<body>
+<!-- @include header -->
+
+<main id="main">
+
+  <section class="subhero subhero--compact" aria-labelledby="page-title">
+    <div class="subhero__card">
+      <div class="subhero__body">
+          <nav class="crumbs" aria-label="Kruimelpad">
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li><span aria-current="page">Afspraak maken</span></li>
+            </ol>
+          </nav>
+          <h1 id="page-title">Afspraak maken</h1>
+          <p>Vul het formulier in, dan nemen wij zo snel mogelijk contact met u op om de afspraak te bevestigen.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Afspraakformulier en contactgegevens">
+    <div class="container form-layout form-layout--aside">
+      <form class="form-card" name="afspraak" method="POST" action="/afspraak/bedankt/" data-netlify="true" netlify-honeypot="website">
+          <input type="hidden" name="form-name" value="afspraak">
+          <p class="hp"><label>Laat dit veld leeg <input name="website" tabindex="-1" autocomplete="off"></label></p>
+          <fieldset>
+            <legend>Uw gegevens</legend>
+            <div class="field"><label for="af-naam">Naam</label><input id="af-naam" name="naam" autocomplete="name" required></div>
+            <div class="field-grid field-grid--2">
+              <div class="field"><label for="af-tel">Telefoon</label><input id="af-tel" name="telefoon" type="tel" autocomplete="tel" required></div>
+              <div class="field"><label for="af-mail">E-mail</label><input id="af-mail" name="email" type="email" autocomplete="email" required></div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Uw voertuig</legend>
+            <div class="field">
+              <span class="label" id="af-type-label">Caravan of camper</span>
+              <div class="choice-row" role="radiogroup" aria-labelledby="af-type-label">
+                <label class="choice"><input type="radio" name="voertuig" value="caravan" required> Caravan</label>
+                <label class="choice"><input type="radio" name="voertuig" value="camper"> Camper</label>
+                <label class="choice"><input type="radio" name="voertuig" value="anders"> Anders</label>
+              </div>
+            </div>
+            <div class="field-grid field-grid--2">
+              <div class="field"><label for="af-kenteken">Kenteken</label><input id="af-kenteken" name="kenteken" autocomplete="off"></div>
+              <div class="field"><label for="af-merk">Merk en model</label><input id="af-merk" name="merk-model"></div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Uw afspraak</legend>
+            <div class="field-grid field-grid--2">
+              <div class="field">
+                <label for="af-dienst">Dienst</label>
+                <select id="af-dienst" name="dienst" required>
+              <option value="" selected disabled>Kies een dienst</option>
+              <option value="apk">APK</option>
+              <option value="onderhoud">Onderhoud</option>
+              <option value="aircoservice">Aircoservice</option>
+              <option value="bandenservice">Bandenservice</option>
+              <option value="storing-diagnose">Storing / diagnose</option>
+              <option value="accessoire-opbouw">Accessoire-opbouw</option>
+              <option value="schadeherstel">Schadeherstel</option>
+              <option value="anders">Anders</option>
+                </select>
+              </div>
+              <div class="field"><label for="af-datum">Voorkeursdatum</label><input id="af-datum" name="voorkeursdatum" type="date"></div>
+            </div>
+            <div class="field"><label for="af-opmerking">Opmerking <span class="optional">(optioneel)</span></label><textarea id="af-opmerking" name="opmerking" rows="4"></textarea></div>
+          </fieldset>
+          <div class="field field--check"><input id="af-akkoord" name="akkoord" type="checkbox" required><label for="af-akkoord">Ik ga akkoord met de verwerking van mijn gegevens voor deze afspraak (zie <a href="/cookiebeleid/#formulieren">privacy</a>).</label></div>
+          <button class="btn btn--accent btn--block" type="submit">Verstuur afspraakverzoek</button>
+      </form>
+
+      <aside class="form-layout__aside">
+        <div class="aside-card">
+          <h3><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-clock"/></svg> Openingstijden</h3>
+          <dl class="hours hours--light">
+            <div><dt>Maandag – vrijdag</dt><dd>07:30 – 18:00</dd></div>
+            <div><dt>Zaterdag</dt><dd>08:30 – 12:00</dd></div>
+            <div><dt>Zondag</dt><dd>Gesloten</dd></div>
+          </dl>
+          <p class="today" data-hours-today>Ma–vr 07:30–18:00 · za 08:30–12:00</p>
+        </div>
+        <div class="aside-card aside-card--tint">
+          <h3>Liever direct contact?</h3>
+          <ul class="contact-list" role="list">
+            <li><a href="tel:+31113405050"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-phone"/></svg> <span><strong>Kampeer &amp; Meer</strong> 0113-40 50 50</span></a></li>
+            <li><a href="tel:+31113382810"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-phone"/></svg> <span><strong>Autobedrijf Lokerse</strong> 0113 382 810</span></a></li>
+            <li><a href="https://wa.me/31113382810" rel="noopener"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-whatsapp"/></svg> <span><strong>WhatsApp</strong> stuur ons een bericht</span></a></li>
+            <li><a href="mailto:info@kampeermeer.com"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-mail"/></svg> <span><strong>E-mail</strong> info@kampeermeer.com</span></a></li>
+          </ul>
+        </div>
+        <div class="aside-card">
+          <h3><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-map-pin"/></svg> Adres</h3>
+          <p>Kampeer &amp; Meer<br>Zandweg 8e<br>4416 NA Kruiningen</p>
+          <a class="link-arrow" href="https://www.google.com/maps/dir/?api=1&amp;destination=Zandweg+8e+4416+NA+Kruiningen" rel="noopener">Route starten <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-move-right"/></svg></a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<!-- @include footer -->
+</body>
+</html>

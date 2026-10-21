@@ -68,3 +68,138 @@
 @media (min-width: 900px) { .services--three { grid-template-columns: repeat(3, 1fr); } }
 .split-head .link-arrow { justify-self: start; }
 @media (min-width: 900px) { .split-head > p:has(.link-arrow) { justify-self: end; } }
+.mini-prices { display: grid; gap: var(--space-2); }
+.mini-prices > div { display: flex; justify-content: space-between; gap: var(--space-4); padding-bottom: var(--space-2); border-bottom: 1px solid rgb(0 0 0 / 0.08); }
+.mini-prices dd { font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.dot-list { display: grid; gap: var(--space-2); padding-left: 1.1em; }
+.dot-list li::marker { color: var(--brand-ink); }
+
+/* ============ Werkplaats ============ */
+.knowledge { display: grid; gap: var(--space-7); align-items: center; }
+.knowledge__body > * + * { margin-top: var(--space-5); }
+@media (min-width: 1024px) { .knowledge { grid-template-columns: 1fr 1fr; gap: clamp(3rem, 6vw, 6rem); } }
+.collage { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+.collage__big { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+.collage__small { aspect-ratio: 1; }
+.collage__big, .collage__small { border-radius: var(--radius-card); overflow: hidden; }
+.collage img { width: 100%; height: 100%; object-fit: cover; }
+.collage__stat {
+  display: flex; flex-direction: column; justify-content: flex-end; gap: var(--space-1);
+  padding: var(--space-5); border-radius: var(--radius-card);
+  background: var(--brand-primary); color: var(--ink);
+}
+.collage__stat .icon { width: 2rem; height: 2rem; margin-bottom: auto; color: var(--brand-dark); }
+.collage__stat .stat__value { font-size: clamp(1.75rem, 1.3rem + 1.5vw, 2.75rem); }
+.feature-card__title { font-size: var(--fs-h3); }
+
+/* ============ Subhero compact (zonder foto) ============ */
+.subhero--compact .subhero__card { min-height: clamp(14rem, 32vh, 20rem); }
+.subhero--compact .subhero__card::after { content: none; }
+.subhero--compact .subhero__card::before {
+  content: ""; position: absolute; z-index: -1; right: -6rem; top: -8rem;
+  width: 24rem; height: 24rem; border-radius: 50%;
+  background: radial-gradient(circle, rgb(247 197 72 / 0.25), transparent 65%);
+}
+
+/* ============ Tarieven ============ */
+.price-cards { display: grid; gap: var(--space-5); }
+@media (min-width: 900px) { .price-cards { grid-template-columns: 1fr 1fr; } }
+.price-card {
+  display: flex; flex-direction: column; gap: var(--space-3);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border-radius: var(--radius-card); background: var(--surface);
+  scroll-margin-top: 6rem;
+}
+.price-card__top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: var(--space-2) var(--space-4); }
+.price-card__top h3 { font-size: 1.375rem; }
+.price-card__price { font-family: var(--font-serif); font-size: 2rem; line-height: 1; color: var(--brand-dark); white-space: nowrap; }
+.price-card__price small { font-family: var(--font-sans); font-size: var(--fs-label); color: var(--ink-muted); }
+.price-card__for { font-size: var(--fs-label); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand-ink); }
+.price-card__lead { font-weight: 600; }
+.price-card .btn { margin-top: auto; align-self: flex-start; }
+.price-card .checklist { margin-bottom: var(--space-4); }
+.checklist--compact { gap: var(--space-2); font-size: var(--fs-small); }
+@media (min-width: 600px) { .checklist--compact { grid-template-columns: 1fr 1fr; column-gap: var(--space-5); } }
+.checklist--compact .icon { width: 1.25rem; height: 1.25rem; }
+.price-table th a { color: var(--ink); }
+.footnote { display: flex; gap: var(--space-3); align-items: flex-start; margin-top: var(--space-6); font-size: var(--fs-small); color: var(--ink-muted); max-width: 70ch; }
+.footnote .icon { margin-top: 0.15rem; color: var(--brand-ink); }
+
+/* ============ Verhuur ============ */
+@media (min-width: 700px) { .rentals--four { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 900px) {
+  .rentals--four .rent-card { flex-direction: row; }
+  .rentals--four .rent-card__media { flex: 0 0 38%; aspect-ratio: auto; border-bottom: 0; border-right: 1px solid var(--line); }
+}
+.rent-card { scroll-margin-top: 6rem; }
+.rent-card__media--product { background: #fff; border-bottom: 1px solid var(--line); }
+.rent-card__media--product img { width: 100%; height: 100%; object-fit: contain; padding: 10%; }
+.compare-table { min-width: 40rem; }
+.compare-table td { font-variant-numeric: tabular-nums; }
+.compare-table tbody tr:first-child td { font-weight: 700; }
+
+/* ============ Formulieren ============ */
+.form-layout { display: grid; gap: var(--space-7); }
+.form-layout__intro > * + * { margin-top: var(--space-4); }
+@media (min-width: 1024px) {
+  .form-layout { grid-template-columns: 1fr 1.3fr; gap: clamp(3rem, 6vw, 6rem); align-items: start; }
+  .form-layout--aside { grid-template-columns: minmax(0, 1.6fr) minmax(19rem, 1fr); }
+}
+.form-layout__aside { display: grid; gap: var(--space-5); align-content: start; }
+.form-card {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border-radius: var(--radius-card);
+  background: var(--surface); border: 1px solid var(--line);
+}
+.section--alt .form-card { border-color: transparent; }
+.form-card .btn { margin-top: var(--space-6); }
+.form-card__title { font-size: var(--fs-h3); margin-bottom: var(--space-2); }
+.form-card fieldset { border: 0; padding: 0; margin: 0 0 var(--space-6); }
+.form-card legend { font-family: var(--font-display); font-weight: 650; font-size: 1.1875rem; margin-bottom: var(--space-1); padding: 0; }
+.form-card .field--check { margin-top: var(--space-4); }
+.optional { font-weight: 400; color: var(--ink-muted); }
+.choice-row { display: flex; flex-wrap: wrap; gap: var(--space-3); padding-top: var(--space-2); }
+.choice {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  min-height: 2.75rem; padding: 0 var(--space-5);
+  border: 1.5px solid var(--line); border-radius: var(--radius-pill);
+  font-weight: 500; cursor: pointer;
+}
+.choice:has(input:checked) { border-color: var(--brand-dark); background: var(--brand-tint); }
+.choice:has(input:focus-visible) { outline: 3px solid var(--brand-dark); outline-offset: 2px; }
+.choice input { accent-color: var(--brand-dark); width: 1.1rem; height: 1.1rem; }
+
+.hours--light > div { border-bottom-color: var(--line); }
+.hours--light dd { color: var(--ink); font-weight: 600; }
+.today { font-size: var(--fs-small); font-weight: 600; color: var(--brand-dark); }
+.aside-card h3 { display: flex; align-items: center; gap: var(--space-2); }
+.aside-card h3 .icon { color: var(--brand-ink); }
+.contact-list { display: grid; gap: var(--space-2); list-style: none; padding: 0; }
+.contact-list a { display: flex; align-items: center; gap: var(--space-3); min-height: 2.75rem; color: var(--ink); text-decoration: none; }
+.contact-list a:hover span { text-decoration: underline; }
+.contact-list .icon { flex: none; width: 2.5rem; height: 2.5rem; padding: 0.6rem; border-radius: 50%; background: var(--surface); color: var(--brand-dark); }
+.contact-list strong { display: block; font-size: var(--fs-label); text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-muted); }
+
+/* ============ Contact ============ */
+.branches { display: grid; gap: var(--space-5); }
+@media (min-width: 900px) { .branches { grid-template-columns: 1fr 1fr; } }
+.branch-card { display: flex; flex-direction: column; border-radius: var(--radius-card); background: var(--surface-alt); overflow: hidden; scroll-margin-top: 6rem; }
+.branch-card__media { aspect-ratio: 16 / 9; }
+.branch-card__media img { width: 100%; height: 100%; object-fit: cover; }
+.branch-card__body { display: grid; gap: var(--space-4); padding: clamp(1.5rem, 3vw, 2rem); flex: 1; align-content: start; }
+.branch-card__body h3 { font-size: 1.5rem; }
+.branch-card__body .btn { justify-self: start; margin-top: var(--space-2); }
+.map-card { position: relative; display: block; aspect-ratio: 4 / 3; border-radius: var(--radius-card); overflow: hidden; }
+.map-card img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--dur) var(--ease); }
+.map-card:hover img { transform: scale(1.03); }
+.map-card__label {
+  position: absolute; left: var(--space-4); bottom: var(--space-4);
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  padding: var(--space-2) var(--space-4); border-radius: var(--radius-pill);
+  background: var(--surface); color: var(--ink); font-weight: 600; font-size: var(--fs-small);
+}
+
+/* ============ Tekstpagina's ============ */
+.narrow { max-width: 46rem; }
+.notfound > * + * { margin-top: var(--space-5); }
+.notfound__links { display: grid; gap: var(--space-1); list-style: none; padding: 0; margin-top: var(--space-7) !important; }

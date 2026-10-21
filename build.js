@@ -39,10 +39,14 @@ function pageUrl(relPath) {
   return url.replace(/index\.html$/, '');
 }
 
+// data-nav-also="/a/ /b/" laat een menu-item ook oplichten op pagina's buiten zijn eigen map
+// (bijv. Werkplaats op /tarieven/).
 function markNav(html, url) {
   return html.replace(/<a\b([^>]*?)\bdata-nav="([^"]+)"([^>]*)>/g, (tag, before, target, after) => {
+    const also = ((before + after).match(/data-nav-also="([^"]+)"/) || [, ''])[1].split(/\s+/).filter(Boolean);
     if (target === url) return `<a${before}data-nav="${target}" aria-current="page"${after}>`;
-    if (target !== '/' && url.startsWith(target)) return `<a${before}data-nav="${target}" data-current="section"${after}>`;
+    const inSection = (target !== '/' && url.startsWith(target)) || also.some((p) => url.startsWith(p));
+    if (inSection) return `<a${before}data-nav="${target}" data-current="section"${after}>`;
     return tag;
   });
 }

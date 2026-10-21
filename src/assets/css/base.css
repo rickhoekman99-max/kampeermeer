@@ -72,6 +72,7 @@ a:hover { text-decoration-thickness: 2px; }
 
 .prose > * + * { margin-top: 1em; }
 .prose h2, .prose h3 { margin-top: 1.6em; }
+.prose h2 { font-size: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem); }
 .prose ul { padding-left: 1.25em; }
 .prose li + li { margin-top: 0.35em; }
 .lead { font-size: clamp(1.125rem, 1rem + 0.4vw, 1.3125rem); color: var(--ink); }

@@ -90,6 +90,14 @@
     });
   }
 
+  /* --- Verhuur: product voorselecteren via de knop Reserveren --- */
+  document.querySelectorAll('[data-product]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var sel = document.getElementById('res-product');
+      if (sel) sel.value = btn.getAttribute('data-product');
+    });
+  });
+
   /* --- Scroll-animaties --- */
   var reveal = document.querySelectorAll('[data-reveal]');
   if (reduceMotion || !('IntersectionObserver' in window)) {

@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Werkplaats voor caravan en camper in Kruiningen · Kampeer &amp; Meer</title>
+  <meta name="description" content="Professioneel ingerichte werkplaats voor caravans en campers van elk merk: APK, onderhoud, banden, airco, diagnose, accessoires en schadeherstel. BOVAG-aangesloten, in Kruiningen.">
+  <link rel="canonical" href="https://kampeermeer.com/werkplaats/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Werkplaats · Kampeer &amp; Meer">
+  <meta property="og:description" content="Werkplaats voor caravans en campers van elk merk in Kruiningen.">
+  <meta property="og:url" content="https://kampeermeer.com/werkplaats/">
+  <meta property="og:locale" content="nl_NL">
+  <link rel="preload" href="/assets/fonts/inter-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/inter-tight-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <link rel="icon" href="/assets/logo/logo-kampeermeer.svg" type="image/svg+xml">
+</head>
+<body>
+<!-- @include header -->
+
+<main id="main">
+
+  <!-- Subhero met aanvraagkaart -->
+  <section class="subhero subhero--with-card" aria-labelledby="page-title">
+    <div class="subhero__layout">
+      <div class="subhero__card">
+        <div class="hero__media">
+          <picture>
+            <source type="image/avif" srcset="/assets/img/photos/werkplaats-caravan-960.avif 960w, /assets/img/photos/werkplaats-caravan-1600.avif 1600w, /assets/img/photos/werkplaats-caravan-2400.avif 2400w" sizes="calc(100vw - 2.5rem)">
+            <source type="image/webp" srcset="/assets/img/photos/werkplaats-caravan-960.webp 960w, /assets/img/photos/werkplaats-caravan-1600.webp 1600w, /assets/img/photos/werkplaats-caravan-2400.webp 2400w" sizes="calc(100vw - 2.5rem)">
+            <img src="/assets/img/photos/werkplaats-caravan-1600.webp" alt="Caravan op de brug in de werkplaats" width="2400" height="1315" fetchpriority="high" decoding="async">
+          </picture>
+        </div>
+        <div class="subhero__body">
+          <nav class="crumbs" aria-label="Kruimelpad">
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li><span aria-current="page">Werkplaats</span></li>
+            </ol>
+          </nav>
+          <h1 id="page-title">Werkplaats voor caravan en camper</h1>
+          <p>Voor elk merk, met moderne diagnoseapparatuur en BOVAG-service.</p>
+        </div>
+      </div>
+
+      <form class="request-card" name="aanvraag" method="POST" action="/afspraak/bedankt/" data-netlify="true" netlify-honeypot="website">
+        <h2>Plan uw afspraak</h2>
+        <input type="hidden" name="form-name" value="aanvraag">
+        <input type="hidden" name="pagina" value="Werkplaats">
+        <p class="hp"><label>Laat dit veld leeg <input name="website" tabindex="-1" autocomplete="off"></label></p>
+        <div class="field"><label for="aanvraag-naam">Naam</label><input id="aanvraag-naam" name="naam" autocomplete="name" required></div>
+        <div class="field-grid field-grid--2">
+          <div class="field"><label for="aanvraag-tel">Telefoon</label><input id="aanvraag-tel" name="telefoon" type="tel" autocomplete="tel" required></div>
+          <div class="field"><label for="aanvraag-kenteken">Kenteken</label><input id="aanvraag-kenteken" name="kenteken" autocomplete="off"></div>
+        </div>
+        <div class="field">
+          <label for="aanvraag-dienst">Dienst</label>
+          <select id="aanvraag-dienst" name="dienst">
+            <option value="" selected>Kies een dienst</option>
+            <option value="apk">APK</option>
+            <option value="onderhoud">Onderhoud</option>
+            <option value="aircoservice">Aircoservice</option>
+            <option value="bandenservice">Bandenservice</option>
+            <option value="storing-diagnose">Storing / diagnose</option>
+            <option value="accessoire-opbouw">Accessoire-opbouw</option>
+            <option value="schadeherstel">Schadeherstel</option>
+            <option value="anders">Anders</option>
+          </select>
+        </div>
+        <button class="btn btn--accent btn--block" type="submit">Vraag afspraak aan</button>
+        <p class="request-card__alt">Liever uitgebreid plannen? <a href="/afspraak/">Ga naar het afsprakenformulier</a></p>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="section" aria-labelledby="intro-title">
+    <div class="container about">
+      <div class="about__head" data-reveal>
+        <span class="eyebrow">Werkplaats</span>
+        <h2 class="h-duo" id="intro-title">Een professioneel ingerichte werkplaats. <span class="muted">Iedereen van dienst, ongeacht het merk van uw camper of caravan.</span></h2>
+      </div>
+      <div class="about__body prose" data-reveal>
+        <p class="lead">De werkplaats van Kampeer &amp; Meer is onderdeel van Autobedrijf Lokerse, een allround autobedrijf met een professioneel ingerichte werkplaats. Daarmee kunnen we iedereen van dienst zijn, ongeacht het merk van uw camper of caravan.</p>
+        <p>U kunt bij ons onder meer terecht voor de APK, onderhoud, een bandenwissel of aircoservice. Ook beschikken wij over moderne diagnoseapparatuur waarmee we uw camper kunnen uitlezen. Door ons lidmaatschap van de BOVAG kunt u verzekerd zijn van de beste service.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diensten -->
+  <section class="section section--alt" aria-labelledby="diensten-title">
+    <div class="container">
+      <div class="section-head section-head--center" data-reveal>
+        <span class="eyebrow">Diensten</span>
+        <h2 id="diensten-title">Waarvoor u bij ons terechtkunt</h2>
+      </div>
+      <div class="services services--home">
+        <article class="service-card" data-reveal>
+          <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-clipboard-check"/></svg></span>
+          <h3><a href="/werkplaats/apk/">APK</a></h3>
+          <p>RDW-erkend keuringsstation. Keuren kan tot twee maanden voor de vervaldatum.</p>
+          <svg class="icon service-card__arrow" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg>
+        </article>
+        <article class="service-card" data-reveal>
+          <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-wrench"/></svg></span>
+          <h3><a href="/werkplaats/onderhoud/">Onderhoud</a></h3>
+          <p>Onderstel, opbouw, gas, water en stroom gecontroleerd, met onderhoudsrapport.</p>
+          <svg class="icon service-card__arrow" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg>
+        </article>
+        <article class="service-card" data-reveal>
+          <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-snowflake"/></svg></span>
+          <h3><a href="/werkplaats/aircoservice/">Aircoservice</a></h3>
+          <p>Laat uw airco minimaal één keer per jaar controleren en reinigen.</p>
+          <svg class="icon service-card__arrow" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg>
+        </article>
+        <article class="service-card" data-reveal>
+          <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-tyre"/></svg></span>
+          <h3><a href="/werkplaats/bandenservice/">Bandenservice</a></h3>
+          <p>De juiste banden voor veilig weggedrag, gecontroleerd door een BOVAG-specialist.</p>
+          <svg class="icon service-card__arrow" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg>
+        </article>
+        <article class="service-card" data-reveal>
+          <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-gauge"/></svg></span>
+          <h3><a href="/werkplaats/storing-diagnose/">Storing / diagnose</a></h3>
+          <p>Brandt er een lampje? Wij lezen de storing uit en verhelpen hem.</p>
+          <svg class="icon service-card__arrow" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg>
+        </article>
+        <article class="service-card" data-reveal>
+          <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-plug"/></svg></span>
+          <h3><a href="/werkplaats/accessoire-opbouw/">Accessoire-opbouw</a></h3>
+          <p>Van zonnepanelen tot E&amp;P-levelsysteem, gemonteerd in eigen huis.</p>
+          <svg class="icon service-card__arrow" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg>
+        </article>
+        <article class="service-card" data-reveal>
+          <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-hammer"/></svg></span>
+          <h3><a href="/werkplaats/schadeherstel/">Schadeherstel</a></h3>
+          <p>Schade aan de opbouw? Wij regelen het herstel, van taxatie tot reparatie.</p>
+          <svg class="icon service-card__arrow" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg>
+        </article>
+        <article class="service-card service-card--dark" data-reveal>
+          <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-info"/></svg></span>
+          <h3><a href="/tarieven/">Tarieven</a></h3>
+          <p>Bekijk de prijzen van onze BOVAG-onderhoudsbeurten.</p>
+          <svg class="icon service-card__arrow" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kennis -->
+  <section class="section" aria-labelledby="kennis-title">
+    <div class="container knowledge">
+      <div class="collage" data-reveal>
+        <div class="collage__big">
+          <picture>
+            <source type="image/avif" srcset="/assets/img/photos/werkplaats-monteur-960.avif 960w, /assets/img/photos/werkplaats-monteur-1600.avif 1600w" sizes="(min-width: 1024px) 600px, 100vw">
+            <source type="image/webp" srcset="/assets/img/photos/werkplaats-monteur-960.webp 960w, /assets/img/photos/werkplaats-monteur-1600.webp 1600w" sizes="(min-width: 1024px) 600px, 100vw">
+            <img src="/assets/img/photos/werkplaats-monteur-1600.webp" alt="Monteur werkt aan het onderstel van een caravan" width="1600" height="823" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <div class="collage__stat">
+          <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-award"/></svg>
+          <span class="stat__value">BOVAG</span>
+          <span>aangesloten werkplaats</span>
+        </div>
+        <div class="collage__small">
+          <picture>
+            <source type="image/avif" srcset="/assets/img/photos/tarieven-960.avif 960w" sizes="(min-width: 1024px) 300px, 50vw">
+            <source type="image/webp" srcset="/assets/img/photos/tarieven-960.webp 960w" sizes="(min-width: 1024px) 300px, 50vw">
+            <img src="/assets/img/photos/tarieven-960.webp" alt="Monteur controleert de wielophanging van een camper" width="960" height="494" loading="lazy" decoding="async">
+          </picture>
+        </div>
+      </div>
+      <div class="knowledge__body" data-reveal>
+        <span class="eyebrow">Kennis</span>
+        <h2 class="h-duo" id="kennis-title">Gemotiveerde, vakbekwame monteurs. <span class="muted">Altijd op de hoogte van de laatste techniek.</span></h2>
+        <div class="prose">
+          <p>Bij ons werken gemotiveerde en vakbekwame monteurs. Door bijscholingscursussen blijven we op de hoogte van de laatste technische ontwikkelingen. Zo hebben wij bijvoorbeeld in december 2019 een bijscholingscursus gedaan voor elektrische auto's, zodat wij niemand hoeven teleurstellen.</p>
+          <p>Wilt u meer weten over onze werkplaats en wat wij voor u kunnen betekenen?</p>
+        </div>
+        <a class="btn btn--secondary" href="https://www.autofirst-lokerse.nl/" rel="noopener">Website Autobedrijf Lokerse <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-external-link"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transparantie -->
+  <section class="section section--tight" aria-labelledby="overleg-title">
+    <div class="container">
+      <div class="feature-card" data-reveal>
+        <svg class="icon feature-card__icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-shield-check"/></svg>
+        <div class="stack">
+          <h2 id="overleg-title" class="feature-card__title">Reparaties alleen na overleg</h2>
+          <p class="lead">Reparaties worden pas na overleg en met uw goedkeuring uitgevoerd, zodat u niet voor onverwachte verrassingen komt te staan.</p>
+          <p>Betrouwbaarheid en transparantie zijn bij ons erg belangrijk. Zo verliezen wij uw belangen niet uit het oog.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--cta" aria-labelledby="cta-title">
+    <div class="container">
+      <div class="cta-band on-dark" data-reveal>
+        <div>
+          <h2 id="cta-title">Uw caravan of camper klaar voor het seizoen?</h2>
+          <p>Plan online een afspraak, bel 0113-40 50 50 of stuur ons een WhatsApp-bericht.</p>
+        </div>
+        <div class="btn-row">
+          <a href="/afspraak/" class="btn btn--accent">Afspraak maken</a>
+          <a href="https://wa.me/31113382810" class="btn btn--secondary" rel="noopener"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-whatsapp"/></svg> WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- @include footer -->
+</body>
+</html>
