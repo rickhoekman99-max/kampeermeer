@@ -252,6 +252,13 @@
 .hero__stats > div { padding: 0 var(--space-5); border-left: 1px solid rgb(255 255 255 / 0.55); }
 .hero__stats strong { display: block; font-family: var(--font-display); font-size: 1.375rem; font-weight: 650; letter-spacing: -0.01em; }
 .hero__stats span { font-size: var(--fs-small); color: rgb(255 255 255 / 0.85); }
+@media (max-width: 599px) {
+  .hero__stats { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .hero__stats > div { padding: 0 var(--space-3); }
+  .hero__stats > div:first-child { padding-left: 0; border-left: 0; }
+  .hero__stats strong { font-size: 1.0625rem; line-height: 1.25; }
+  .hero__stats span { font-size: var(--fs-label); line-height: 1.3; display: block; margin-top: 2px; }
+}
 @media (min-width: 1024px) {
   .hero__foot { grid-template-columns: 1.3fr 1fr auto; }
 }
@@ -406,6 +413,11 @@
 }
 .bento__thumb { width: 60%; aspect-ratio: 3 / 4; border-radius: 14px; overflow: hidden; }
 .bento__thumb .ph { min-height: 0; }
+@media (max-width: 899px) {
+  .bento__small { min-height: 0; flex-direction: row; align-items: center; gap: var(--space-5); }
+  .bento__thumb { width: 38%; flex: none; aspect-ratio: 1; }
+  .bento__thumb .ph { padding: var(--space-2); font-size: 0.6875rem; }
+}
 .bento__small h3 { font-size: 1.1875rem; margin-bottom: var(--space-2); }
 .bento__small p { font-size: var(--fs-small); color: var(--ink-muted); }
 .bento__big {
@@ -416,9 +428,21 @@
   color: var(--ink-inverse);
 }
 .bento__big::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgb(10 30 20 / 0.6) 0%, transparent 60%); }
-.bento__big .hero__media .ph { padding-top: 55%; }
+.bento__big .hero__media .ph { align-items: start; justify-items: end; text-align: right; padding: var(--space-6); }
 .bento__big h3 { font-size: var(--fs-h3); max-width: 20ch; }
 .bento__big p { margin-top: var(--space-2); max-width: 40ch; opacity: 0.92; }
+.bento__link { color: inherit; text-decoration: none; transition: transform var(--dur) var(--ease); }
+.bento__link:hover { transform: translateY(-3px); }
+.bento__link.bento__small { color: var(--ink); }
+.bento__big { display: flex; flex-direction: column; align-items: flex-start; }
+.bento__cta {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  margin-top: auto; padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-pill); background: var(--surface); color: var(--brand-dark);
+  font-weight: 600; font-size: var(--fs-small);
+}
+.bento__cta .icon { width: 1rem; height: 1rem; transition: transform var(--dur) var(--ease); }
+.bento__link:hover .bento__cta .icon { transform: translateX(4px); }
 .bento__badge {
   display: grid; place-items: center; width: 3rem; height: 3rem; margin-bottom: var(--space-5);
   border-radius: 50%; background: var(--surface); color: var(--brand-dark);
@@ -448,8 +472,27 @@
 .service-card p { color: var(--ink-muted); font-size: var(--fs-small); flex: 1; }
 .service-card__arrow { width: 1.5rem; height: 1.5rem; color: var(--brand-ink); transition: transform var(--dur) var(--ease); }
 .service-card:hover .service-card__arrow { transform: translateX(5px); }
+@media (max-width: 599px) {
+  .service-card {
+    display: grid; grid-template-columns: auto 1fr auto;
+    grid-template-areas: "icon title arrow" "icon text arrow";
+    gap: var(--space-1) var(--space-4); padding: var(--space-5);
+  }
+  .service-card__icon { grid-area: icon; margin: 0; width: 2.75rem; height: 2.75rem; }
+  .service-card h3 { grid-area: title; font-size: 1.125rem; }
+  .service-card p { grid-area: text; }
+  .service-card__arrow { grid-area: arrow; align-self: center; }
+}
 .service-card:focus-within { outline: 3px solid var(--brand-dark); outline-offset: 3px; }
 .service-card a:focus-visible { outline: none; }
+
+.service-card--dark { background: var(--brand-dark); border-color: var(--brand-dark); color: var(--ink-inverse); }
+.section--alt .service-card--dark { border-color: var(--brand-dark); }
+.service-card--dark h3 a { color: var(--ink-inverse); }
+.service-card--dark p { color: var(--ink-inverse-muted); }
+.service-card--dark .service-card__icon { background: rgb(247 197 72 / 0.18); color: var(--brand-primary); }
+.service-card--dark .service-card__arrow { color: var(--brand-primary); }
+.service-card--dark:focus-within { outline-color: var(--brand-primary); }
 
 /* ============ 13. Verhuurkaart ============ */
 .rentals { display: grid; gap: var(--space-5); grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); }
@@ -497,6 +540,12 @@
   min-width: 6.5rem; height: 3.25rem; padding: 0 var(--space-4);
   border: 1.5px dashed #c8ccc6; border-radius: 10px;
   font-size: var(--fs-label); font-weight: 700; letter-spacing: 0.06em; color: #5b6360;
+}
+
+@media (max-width: 479px) {
+  .marks { gap: var(--space-3); flex-wrap: nowrap; }
+  .marks > li + li { padding-left: var(--space-3); }
+  .mark-ph { min-width: 0; padding: 0 var(--space-3); height: 2.75rem; }
 }
 
 /* ============ 16. CTA-band ============ */

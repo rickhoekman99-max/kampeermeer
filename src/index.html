@@ -3,15 +3,223 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kampeer &amp; Meer — in opbouw</title>
-  <meta name="robots" content="noindex">
+  <title>Kampeer &amp; Meer Kruiningen · Werkplaats, verhuur en kampeershop voor caravan en camper</title>
+  <meta name="description" content="APK, onderhoud en reparatie voor caravans en campers van alle merken, verhuur van dakkoffers en fietsendragers en een kampeershop. BOVAG-aangesloten familiebedrijf in Kruiningen.">
+  <link rel="canonical" href="https://kampeermeer.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kampeer &amp; Meer · Zorgeloos kamperen begint hier">
+  <meta property="og:description" content="Werkplaats, verhuur en kampeershop voor caravan en camper in Kruiningen.">
+  <meta property="og:url" content="https://kampeermeer.com/">
+  <meta property="og:locale" content="nl_NL">
+  <link rel="preload" href="/assets/fonts/inter-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/inter-tight-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/site.css">
+  <link rel="icon" href="/assets/logo/logo-kampeermeer.svg" type="image/svg+xml">
 </head>
 <body>
 <!-- @include header -->
-<main>
-  <h1>Kampeer &amp; Meer — nieuwe website in opbouw</h1>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__card">
+      <div class="hero__media">
+        <!-- FOTO: hero camper/caravan in Zeeuws landschap, liggend, min. 2400px breed, rustige lucht.
+             Vervangen door <picture> met AVIF/WebP, width/height en fetchpriority="high" (niet lazy). -->
+        <div class="ph"><span>Foto: camper of caravan in Zeeuws landschap, rustige lucht</span></div>
+      </div>
+      <p class="hero__wordmark" aria-hidden="true">Kampeer<span class="amp">&amp;</span>Meer</p>
+      <div class="hero__foot">
+        <h1 id="hero-title">Zorgeloos kamperen begint hier</h1>
+        <p class="hero__intro">Werkplaats, verhuur en kampeershop voor uw caravan of camper, in Kruiningen.</p>
+        <div class="hero__stats">
+          <div><strong>Bijna 60 jaar</strong><span>familiebedrijf</span></div>
+          <div><strong>BOVAG</strong><span>aangesloten</span></div>
+          <div><strong>Alle merken</strong><span>caravans &amp; campers</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Over ons -->
+  <section class="section" aria-labelledby="over-ons-title">
+    <div class="container about">
+      <div class="about__head" data-reveal>
+        <span class="eyebrow eyebrow--pill">Over ons</span>
+        <h2 class="h-duo" id="over-ons-title">Een energiek familiebedrijf. <span class="muted">Al bijna 60 jaar ervaring, onderdeel van Autobedrijf Lokerse.</span></h2>
+        <div class="about__photo">
+          <div class="ph"><span>Foto: Martijn &amp; Klazien Lokerse</span></div>
+        </div>
+      </div>
+      <div class="about__body" data-reveal>
+        <ul class="marks" role="list" aria-label="Keurmerken">
+          <li><span class="mark-ph">BOVAG</span></li>
+          <li><span class="mark-ph">RDW</span></li>
+          <li><span class="mark-ph">Campingaz</span></li>
+        </ul>
+        <div class="prose">
+          <p class="lead">Eigenaar Martijn en zijn vrouw Klazien Lokerse zijn gedreven kampeerders. Zij weten uit ervaring welk plezier en welke rust het kamperen met zich meebrengt, en wat er nodig is om zorgeloos met de caravan of camper op vakantie te gaan.</p>
+          <p>De passie voor het kamperen en de kennis over caravans en campers komen samen in de kampeerwinkel: Kampeer &amp; Meer.</p>
+          <p>Wilt u uw caravan of camper APK laten keuren of een onderhoudsbeurt geven? Dat kan! Onze ervaren monteurs zijn enthousiast en gemotiveerd om u zo volledig mogelijk te helpen. Wij zijn aangesloten bij de BOVAG om u topservice te kunnen bieden. Geen probleem is voor ons te groot. <a href="/afspraak/">Maak direct een afspraak.</a></p>
+          <p>Bent u op zoek naar een gebruikte caravan of camper, of wilt u uw voertuig verkopen? Dan bent u bij ons aan het juiste adres. Neem ook gerust een kijkje in onze kampeershop, waar u de juiste benodigdheden vindt om uw vakantie nog aantrekkelijker te maken. Wij zijn ook dealer van Campingaz.</p>
+        </div>
+        <div class="btn-row">
+          <a href="/contact/" class="btn btn--primary">Meer over ons <span class="btn__dot" aria-hidden="true"><svg class="icon"><use href="/assets/img/icons.svg#i-arrow-up-right"/></svg></span></a>
+          <a href="tel:+31113405050" class="link-arrow">Bel 0113-40 50 50 <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-move-right"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="stats about__stats">
+        <div class="stat" data-reveal><span class="stat__value">±60</span><span class="stat__label">jaar familiebedrijf</span></div>
+        <div class="stat" data-reveal><span class="stat__value">BOVAG</span><span class="stat__label">aangesloten werkplaats</span></div>
+        <div class="stat" data-reveal><span class="stat__value">RDW</span><span class="stat__label">erkend keuringsstation</span></div>
+        <div class="stat" data-reveal><span class="stat__value">Alle</span><span class="stat__label">merken caravans &amp; campers</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wat we doen -->
+  <section class="section section--alt" aria-labelledby="wat-title">
+    <div class="container">
+      <div class="split-head" data-reveal>
+        <div>
+          <span class="eyebrow eyebrow--pill eyebrow--icon"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-asterisk"/></svg> Wat we doen</span>
+          <h2 id="wat-title">Alles voor uw caravan en camper onder één dak</h2>
+        </div>
+        <p>Van APK en onderhoud tot een dakkoffer voor de vakantie en de laatste spullen uit de kampeershop.</p>
+      </div>
+      <div class="trio">
+        <article class="trio-card trio-card--light" data-reveal>
+          <svg class="icon trio-card__icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-wrench"/></svg>
+          <h3><a href="/werkplaats/">Werkplaats</a></h3>
+          <p>APK, onderhoud, banden, airco en diagnose voor caravans en campers van elk merk.</p>
+          <span class="trio-card__notch"><span class="trio-card__more">Lees meer <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg></span></span>
+        </article>
+        <article class="trio-card trio-card--brand" data-reveal>
+          <svg class="icon trio-card__icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-bike"/></svg>
+          <h3><a href="/verhuur/">Verhuur dakkoffers &amp; fietsendragers</a></h3>
+          <p>Van dakkoffer XL tot een Thule fietsendrager, per dag te huur.</p>
+          <span class="trio-card__notch"><span class="trio-card__more">Lees meer <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg></span></span>
+        </article>
+        <article class="trio-card trio-card--dark" data-reveal>
+          <svg class="icon trio-card__icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-shopping-bag"/></svg>
+          <h3><a href="/contact/">Kampeershop &amp; occasions</a></h3>
+          <p>Kampeerbenodigdheden, Campingaz en gebruikte caravans en campers. Kom gerust langs.</p>
+          <span class="trio-card__notch"><span class="trio-card__more">Kom langs <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg></span></span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Werkplaatsdiensten -->
+  <section class="section" aria-labelledby="diensten-title">
+    <div class="container">
+      <div class="section-head section-head--center" data-reveal>
+        <span class="eyebrow">Werkplaats</span>
+        <h2 class="h-duo" id="diensten-title">Zorgeloos op pad. <span class="muted">Wij zorgen dat uw caravan of camper klaar is voor vertrek.</span></h2>
+      </div>
+      <div class="services services--home">
+        <article class="service-card" data-reveal>
+          <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-clipboard-check"/></svg></span>
+          <h3><a href="/werkplaats/apk/">APK</a></h3>
+          <p>RDW-erkend keuringsstation. Keuren kan tot twee maanden voor de vervaldatum.</p>
+          <svg class="icon service-card__arrow" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg>
+        </article>
+        <article class="service-card" data-reveal>
+          <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-wrench"/></svg></span>
+          <h3><a href="/werkplaats/onderhoud/">Onderhoud</a></h3>
+          <p>Onderstel, opbouw, gas, water en stroom gecontroleerd, met onderhoudsrapport.</p>
+          <svg class="icon service-card__arrow" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg>
+        </article>
+        <article class="service-card" data-reveal>
+          <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-snowflake"/></svg></span>
+          <h3><a href="/werkplaats/aircoservice/">Aircoservice</a></h3>
+          <p>Laat uw airco minimaal één keer per jaar controleren en reinigen.</p>
+          <svg class="icon service-card__arrow" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg>
+        </article>
+        <article class="service-card" data-reveal>
+          <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-tyre"/></svg></span>
+          <h3><a href="/werkplaats/bandenservice/">Bandenservice</a></h3>
+          <p>De juiste banden voor veilig weggedrag, gecontroleerd door een BOVAG-specialist.</p>
+          <svg class="icon service-card__arrow" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg>
+        </article>
+        <article class="service-card" data-reveal>
+          <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-gauge"/></svg></span>
+          <h3><a href="/werkplaats/storing-diagnose/">Storing / diagnose</a></h3>
+          <p>Brandt er een lampje? Wij lezen de storing uit en verhelpen hem.</p>
+          <svg class="icon service-card__arrow" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg>
+        </article>
+        <article class="service-card" data-reveal>
+          <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-plug"/></svg></span>
+          <h3><a href="/werkplaats/accessoire-opbouw/">Accessoire-opbouw</a></h3>
+          <p>Van zonnepanelen tot E&amp;P-levelsysteem, gemonteerd in eigen huis.</p>
+          <svg class="icon service-card__arrow" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg>
+        </article>
+        <article class="service-card" data-reveal>
+          <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-hammer"/></svg></span>
+          <h3><a href="/werkplaats/schadeherstel/">Schadeherstel</a></h3>
+          <p>Schade aan de opbouw? Wij regelen het herstel, van taxatie tot reparatie.</p>
+          <svg class="icon service-card__arrow" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg>
+        </article>
+        <article class="service-card service-card--dark" data-reveal>
+          <span class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-info"/></svg></span>
+          <h3><a href="/tarieven/">Tarieven</a></h3>
+          <p>Bekijk de prijzen van onze BOVAG-onderhoudsbeurten.</p>
+          <svg class="icon service-card__arrow" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Verhuur-teaser -->
+  <section class="section section--alt" aria-labelledby="verhuur-title">
+    <div class="container">
+      <div class="section-head section-head--center" data-reveal>
+        <span class="eyebrow">Verhuur</span>
+        <h2 id="verhuur-title">Dakkoffers en fietsendragers huren in Zeeland</h2>
+        <p>Een dagje naar het strand, een rondje fietsen in de natuur of langer op vakantie? Huur bij ons wat u nodig hebt.</p>
+      </div>
+      <div class="bento">
+        <a class="bento__small bento__link" href="/verhuur/#thule-fietsendrager" data-reveal>
+          <div class="bento__thumb"><div class="ph"><span>Foto: Thule fietsendrager</span></div></div>
+          <div><h3>Thule fietsendrager</h3><p>Voor 2 fietsen, 13-polige stekker. €10,- per dag.</p></div>
+        </a>
+        <a class="bento__big bento__link" href="/verhuur/" data-reveal>
+          <div class="hero__media"><div class="ph"><span>Foto: dakkoffer op een auto, onderweg</span></div></div>
+          <span class="bento__badge"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-package"/></svg></span>
+          <h3>Dakkoffers huren vanaf €8,- per dag</h3>
+          <p>Medium, Large of Extra Large: van 300 tot 600 liter.</p>
+          <span class="bento__cta">Bekijk alle verhuur <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg></span>
+        </a>
+        <a class="bento__small bento__link" href="/verhuur/#dakkoffers" data-reveal>
+          <div class="bento__thumb"><div class="ph"><span>Foto: dakkoffer los</span></div></div>
+          <div><h3>Ook voor ski's</h3><p>De dakkoffers Large en Extra Large zijn geschikt voor ski's.</p></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--cta" aria-labelledby="cta-title">
+    <div class="container">
+      <div class="cta-band on-dark" data-reveal>
+        <div>
+          <h2 id="cta-title">Uw caravan of camper klaar voor het seizoen?</h2>
+          <p>Plan online een afspraak, bel 0113-40 50 50 of stuur ons een WhatsApp-bericht.</p>
+        </div>
+        <div class="btn-row">
+          <a href="/afspraak/" class="btn btn--accent">Afspraak maken</a>
+          <a href="https://wa.me/31113382810" class="btn btn--secondary" rel="noopener"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-whatsapp"/></svg> WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
+
 <!-- @include footer -->
 </body>
 </html>

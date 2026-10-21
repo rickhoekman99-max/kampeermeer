@@ -22,6 +22,22 @@
 .sg-type > * + * { margin-top: var(--space-5); }
 .sg-demo-dark { background: var(--brand-dark); border-radius: var(--radius-card); padding: var(--space-6); }
 
-/* ============ Home: over ons ============ */
+/* ============ Home ============ */
 .about { display: grid; gap: var(--space-7); }
-@media (min-width: 1024px) { .about { grid-template-columns: 1.1fr 1fr; align-items: start; } }
+.about__head > * + * { margin-top: var(--space-5); }
+.about__photo { aspect-ratio: 4 / 3; border-radius: var(--radius-card); overflow: hidden; margin-top: var(--space-6) !important; }
+.about__photo .ph { min-height: 0; }
+@media (min-width: 600px) and (max-width: 1023px) { .about__photo { aspect-ratio: 16 / 9; } }
+.about__body { display: grid; gap: var(--space-6); align-content: start; }
+.about__stats { margin-top: clamp(3rem, 7vw, 5.5rem); }
+@media (min-width: 1024px) {
+  .about { grid-template-columns: 1fr 1fr; gap: clamp(3rem, 6vw, 6rem); align-items: start; }
+  .about__body { padding-top: var(--space-8); }
+}
+
+.split-head { display: grid; gap: var(--space-5); margin-bottom: var(--space-7); }
+.split-head h2 { margin-top: var(--space-4); max-width: 18ch; }
+.split-head > p { color: var(--ink-muted); max-width: 40ch; }
+@media (min-width: 900px) { .split-head { grid-template-columns: 1.4fr 1fr; align-items: end; } }
+
+.section--cta { padding-bottom: 0; }
