@@ -1,5 +1,13 @@
 # Netlify: instellingen na de eerste deploy
 
+## Huidige preview (fase 7)
+- Site: **kampeermeer-preview** · https://kampeermeer-preview.netlify.app
+- Beheer: https://app.netlify.com/projects/kampeermeer-preview
+- Handmatig publiceren vanuit deze map: `netlify deploy --build --prod`
+- Openbaar (Netlify-login uitgezet) en formulierdetectie aan; alle 4 formulieren herkend.
+- Nog niet gekoppeld aan GitHub: automatisch publiceren bij elke push kan via
+  Project configuration → Build & deploy → Link repository (branch `redesign` of later `main`).
+
 De code is klaar voor Netlify (`netlify.toml`: build `node build.js`, publish `dist`).
 Deze stappen gebeuren in het Netlify-dashboard en moeten door de eigenaar worden gedaan.
 

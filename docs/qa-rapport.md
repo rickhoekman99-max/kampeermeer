@@ -85,3 +85,12 @@ piek in blokkeertijd (710 ms) op de testcomputer, niet door de site (de site geb
 4. Licentie AdobeStock-foto (hero) controleren voor webgebruik.
 5. Echte BOVAG- en Campingaz-logo's aanleveren (nu placeholders in de keurmerkenrij).
 6. Netlify-instellingen voor formuliermeldingen: zie `docs/netlify.md`.
+
+## Meting op de echte preview (fase 7)
+
+Lighthouse op https://kampeermeer-preview.netlify.app (alle 16 pagina's, mobiel + desktop):
+performance 95–100 (mobiel) en 100 (desktop), accessibility 100, SEO 100 (bedankt/404: 66, noindex).
+Best practices 93 door de "Built with Netlify"-badge: Netlify injecteert dat script op gratis sites,
+onze CSP blokkeert het (badge verschijnt niet) en dat geeft een consolefout. Oplossing: badge uitzetten
+in de Netlify-instellingen. CSS wordt sinds deze fase geminificeerd (52 → 42 KB).
+

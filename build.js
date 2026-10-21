@@ -11,7 +11,7 @@
  *   zodat er geen extra request nodig is en iconen nooit los kunnen wegvallen.
  * - Voegt BreadcrumbList-JSON-LD toe op basis van het kruimelpad (<nav class="crumbs">).
  * - Schrijft sitemap.xml met alle indexeerbare pagina's (zonder noindex).
- * - Bundelt de CSS uit src/assets/css/ in vaste volgorde tot dist/assets/css/site.css.
+ * - Bundelt de CSS uit src/assets/css/ in vaste volgorde tot dist/assets/css/site.css (geminificeerd).
  *
  * Gebruik: node build.js
  */
@@ -97,13 +97,26 @@ function writeSitemap() {
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`);
 }
 
+// Eenvoudige CSS-minifier: eerst commentaar weg (kan aanhalingstekens bevatten), daarna witruimte
+// inkorten buiten strings.
+function minifyCss(css) {
+  return css.replace(/\/\*[\s\S]*?\*\//g, '').split(/("(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*')/).map((part, i) => {
+    if (i % 2) return part; // string
+    return part
+      .replace(/\s+/g, ' ')
+      .replace(/\s*([{};,>])\s*/g, '$1')
+      .replace(/:\s+/g, ':')
+      .replace(/;}/g, '}');
+  }).join('').trim();
+}
+
 function bundleCss() {
   const dir = path.join(SRC, 'assets', 'css');
   const parts = CSS_ORDER.filter((f) => fs.existsSync(path.join(dir, f)))
     .map((f) => `/* ==== ${f} ==== */\n` + fs.readFileSync(path.join(dir, f), 'utf8'));
   const out = path.join(DIST, 'assets', 'css', 'site.css');
   fs.mkdirSync(path.dirname(out), { recursive: true });
-  fs.writeFileSync(out, parts.join('\n'));
+  fs.writeFileSync(out, minifyCss(parts.join('\n')));
 }
 
 function walk(dir, rel = '') {
