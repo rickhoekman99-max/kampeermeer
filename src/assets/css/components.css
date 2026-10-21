@@ -633,3 +633,8 @@
 }
 .feature-card__icon { width: 2.5rem; height: 2.5rem; color: var(--brand-dark); }
 @media (min-width: 768px) { .feature-card { grid-template-columns: auto 1fr; align-items: start; gap: var(--space-6); } }
+
+/* Op kleine schermen dezelfde zijmarge als de rest van de pagina (container-gutter) */
+@media (max-width: 899px) {
+  .hero, .subhero { padding-inline: var(--gutter); }
+}
