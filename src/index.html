@@ -25,19 +25,16 @@
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero__card">
       <div class="hero__media">
-        <!-- FOTO: hero camper/caravan in Zeeuws landschap, liggend, min. 2400px breed, rustige lucht.
-             Vervangen door <picture> met AVIF/WebP, width/height en fetchpriority="high" (niet lazy). -->
-        <div class="ph"><span>Foto: camper of caravan in Zeeuws landschap, rustige lucht</span></div>
+        <picture>
+          <source type="image/avif" srcset="/assets/img/photos/hero-camper-strand-960.avif 960w, /assets/img/photos/hero-camper-strand-1600.avif 1600w, /assets/img/photos/hero-camper-strand-2400.avif 2400w" sizes="calc(100vw - 2.5rem)">
+          <source type="image/webp" srcset="/assets/img/photos/hero-camper-strand-960.webp 960w, /assets/img/photos/hero-camper-strand-1600.webp 1600w, /assets/img/photos/hero-camper-strand-2400.webp 2400w" sizes="calc(100vw - 2.5rem)">
+          <img src="/assets/img/photos/hero-camper-strand-1600.webp" alt="Camper op het strand aan zee onder een wijde lucht" width="2400" height="1350" fetchpriority="high" decoding="async">
+        </picture>
       </div>
       <p class="hero__wordmark" aria-hidden="true">Kampeer<span class="amp">&amp;</span>Meer</p>
       <div class="hero__foot">
         <h1 id="hero-title">Zorgeloos kamperen begint hier</h1>
         <p class="hero__intro">Werkplaats, verhuur en kampeershop voor uw caravan of camper, in Kruiningen.</p>
-        <div class="hero__stats">
-          <div><strong>Bijna 60 jaar</strong><span>familiebedrijf</span></div>
-          <div><strong>BOVAG</strong><span>aangesloten</span></div>
-          <div><strong>Alle merken</strong><span>caravans &amp; campers</span></div>
-        </div>
       </div>
     </div>
   </section>
@@ -49,7 +46,11 @@
         <span class="eyebrow">Over ons</span>
         <h2 class="h-duo" id="over-ons-title">Een energiek familiebedrijf. <span class="muted">Al bijna 60 jaar ervaring, onderdeel van Autobedrijf Lokerse.</span></h2>
         <div class="about__photo">
-          <div class="ph"><span>Foto: Martijn &amp; Klazien Lokerse</span></div>
+          <picture>
+            <source type="image/avif" srcset="/assets/img/photos/team-800.avif 800w, /assets/img/photos/team-1200.avif 1200w" sizes="(min-width: 1024px) 600px, 100vw">
+            <source type="image/webp" srcset="/assets/img/photos/team-800.webp 800w, /assets/img/photos/team-1200.webp 1200w" sizes="(min-width: 1024px) 600px, 100vw">
+            <img src="/assets/img/photos/team-1200.webp" alt="Twee monteurs van Kampeer &amp; Meer in de werkplaats" width="1200" height="900" loading="lazy" decoding="async">
+          </picture>
         </div>
       </div>
       <div class="about__body" data-reveal>
@@ -184,18 +185,24 @@
       </div>
       <div class="bento">
         <a class="bento__small bento__link" href="/verhuur/#thule-fietsendrager" data-reveal>
-          <div class="bento__thumb"><div class="ph"><span>Foto: Thule fietsendrager</span></div></div>
+          <div class="bento__thumb bento__thumb--product"><img src="/assets/img/photos/product-fietsendrager-400.webp" alt="Thule fietsendrager" width="400" height="400" loading="lazy" decoding="async"></div>
           <div><h3>Thule fietsendrager</h3><p>Voor 2 fietsen, 13-polige stekker. €10,- per dag.</p></div>
         </a>
         <a class="bento__big bento__link" href="/verhuur/" data-reveal>
-          <div class="hero__media"><div class="ph"><span>Foto: dakkoffer op een auto, onderweg</span></div></div>
+          <div class="hero__media">
+            <picture>
+              <source type="image/avif" srcset="/assets/img/photos/verhuur-thule-koffer-960.avif 960w, /assets/img/photos/verhuur-thule-koffer-1600.avif 1600w" sizes="(min-width: 900px) 620px, 100vw">
+              <source type="image/webp" srcset="/assets/img/photos/verhuur-thule-koffer-960.webp 960w, /assets/img/photos/verhuur-thule-koffer-1600.webp 1600w" sizes="(min-width: 900px) 620px, 100vw">
+              <img src="/assets/img/photos/verhuur-thule-koffer-1600.webp" alt="" width="1600" height="823" loading="lazy" decoding="async">
+            </picture>
+          </div>
           <span class="bento__badge"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-package"/></svg></span>
           <h3>Dakkoffers huren vanaf €8,- per dag</h3>
           <p>Medium, Large of Extra Large: van 300 tot 600 liter.</p>
           <span class="bento__cta">Bekijk alle verhuur <svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-right"/></svg></span>
         </a>
         <a class="bento__small bento__link" href="/verhuur/#dakkoffers" data-reveal>
-          <div class="bento__thumb"><div class="ph"><span>Foto: dakkoffer los</span></div></div>
+          <div class="bento__thumb bento__thumb--product"><img src="/assets/img/photos/product-dakkoffer-xl-400.webp" alt="Dakkoffer Extra Large" width="400" height="400" loading="lazy" decoding="async"></div>
           <div><h3>Ook voor ski's</h3><p>De dakkoffers Large en Extra Large zijn geschikt voor ski's.</p></div>
         </a>
       </div>

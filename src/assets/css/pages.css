@@ -27,6 +27,7 @@
 .about__head > * + * { margin-top: var(--space-5); }
 .about__photo { aspect-ratio: 4 / 3; border-radius: var(--radius-card); overflow: hidden; margin-top: var(--space-6) !important; }
 .about__photo .ph { min-height: 0; }
+.about__photo img { width: 100%; height: 100%; object-fit: cover; }
 @media (min-width: 600px) and (max-width: 1023px) { .about__photo { aspect-ratio: 16 / 9; } }
 .about__body { display: grid; gap: var(--space-6); align-content: start; }
 .about__stats { margin-top: clamp(3rem, 7vw, 5.5rem); }
