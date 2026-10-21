@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /styleguide/
+Disallow: /afspraak/bedankt/
+
+Sitemap: https://kampeermeer.com/sitemap.xml

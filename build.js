@@ -9,6 +9,8 @@
  *   data-current="section" op de bovenliggende sectie (bv. Werkplaats op /werkplaats/apk/).
  * - Zet de iconensprite (src/assets/img/icons.svg) inline in elke pagina die iconen gebruikt,
  *   zodat er geen extra request nodig is en iconen nooit los kunnen wegvallen.
+ * - Voegt BreadcrumbList-JSON-LD toe op basis van het kruimelpad (<nav class="crumbs">).
+ * - Schrijft sitemap.xml met alle indexeerbare pagina's (zonder noindex).
  * - Bundelt de CSS uit src/assets/css/ in vaste volgorde tot dist/assets/css/site.css.
  *
  * Gebruik: node build.js
@@ -65,6 +67,36 @@ function inlineSprite(html) {
     .replace(/<body([^>]*)>/, (m) => `${m}\n${sprite.trim()}`);
 }
 
+const SITE = 'https://kampeermeer.com';
+
+function breadcrumbJsonLd(html, url) {
+  const nav = html.match(/<nav class="crumbs"[\s\S]*?<\/nav>/);
+  if (!nav) return html;
+  const items = [...nav[0].matchAll(/<li>\s*(?:<a href="([^"]+)">([^<]+)<\/a>|<span[^>]*>([^<]+)<\/span>)\s*<\/li>/g)]
+    .map((m, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: (m[2] || m[3]).replace(/&amp;/g, '&').trim(),
+      item: SITE + (m[1] || url),
+    }));
+  if (!items.length) return html;
+  const json = JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items });
+  return html.replace('</head>', `  <script type="application/ld+json">${json}</script>\n</head>`);
+}
+
+const sitemapUrls = [];
+function collectSitemap(html, url) {
+  if (/<meta name="robots" content="[^"]*noindex/.test(html) || url.endsWith('.html')) return;
+  sitemapUrls.push(url);
+}
+
+function writeSitemap() {
+  const today = new Date().toISOString().slice(0, 10);
+  const body = sitemapUrls.sort().map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod></url>`).join('\n');
+  fs.writeFileSync(path.join(DIST, 'sitemap.xml'),
+    `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`);
+}
+
 function bundleCss() {
   const dir = path.join(SRC, 'assets', 'css');
   const parts = CSS_ORDER.filter((f) => fs.existsSync(path.join(dir, f)))
@@ -84,7 +116,9 @@ function walk(dir, rel = '') {
     if (entry.isDirectory()) {
       walk(srcPath, relPath);
     } else if (entry.name.endsWith('.html')) {
-      const html = inlineSprite(markNav(applyIncludes(fs.readFileSync(srcPath, 'utf8')), pageUrl(relPath)));
+      const url = pageUrl(relPath);
+      const html = breadcrumbJsonLd(inlineSprite(markNav(applyIncludes(fs.readFileSync(srcPath, 'utf8')), url)), url);
+      collectSitemap(html, url);
       fs.mkdirSync(path.dirname(outPath), { recursive: true });
       fs.writeFileSync(outPath, html);
       pages++;
@@ -99,4 +133,5 @@ let pages = 0;
 fs.rmSync(DIST, { recursive: true, force: true });
 walk(SRC);
 bundleCss();
-console.log(`Klaar: ${pages} pagina's naar dist/`);
+writeSitemap();
+console.log(`Klaar: ${pages} pagina's naar dist/, ${sitemapUrls.length} in sitemap.xml`);

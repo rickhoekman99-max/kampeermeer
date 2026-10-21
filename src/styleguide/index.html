@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Styleguide — Kampeer &amp; Meer</title>
   <meta name="robots" content="noindex, nofollow">
-  <link rel="preload" href="/assets/fonts/inter-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/inter-tight-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/site.css">
-  <link rel="icon" href="/assets/logo/logo-kampeermeer.svg" type="image/svg+xml">
+  <!-- @include head -->
 </head>
 <body>
 <!-- @include header -->
@@ -134,7 +131,7 @@
             <p>Kampeer &amp; Meer is een RDW-erkend keuringsstation.</p>
           </div>
         </div>
-        <form class="request-card" name="sg-demo" action="#" onsubmit="return false">
+        <form class="request-card" name="sg-demo" action="#">
           <h2>Plan uw afspraak</h2>
           <div class="field"><label for="sg-naam">Naam</label><input id="sg-naam" name="naam" autocomplete="name"></div>
           <div class="field-grid field-grid--2">
@@ -149,7 +146,7 @@
               <option value="aircoservice">Aircoservice</option>
             </select>
           </div>
-          <button class="btn btn--accent btn--block" type="submit">Verstuur aanvraag</button>
+          <button class="btn btn--accent btn--block" type="button">Verstuur aanvraag</button>
         </form>
       </div>
     </div>
