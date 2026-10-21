@@ -85,6 +85,8 @@
 .nav__item--sub.is-open .nav__dropdown,
 .nav__item--sub:hover .nav__dropdown {
   opacity: 1; visibility: visible; transform: none;
+  /* direct zichtbaar (en dus focusbaar) bij openen; alleen bij sluiten vertraagd */
+  transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease), visibility 0s;
 }
 .nav__dropdown a {
   display: flex; align-items: center; justify-content: space-between; gap: var(--space-3);

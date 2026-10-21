@@ -58,7 +58,7 @@
   border-radius: var(--radius-card);
   background: var(--surface-alt);
 }
-.aside-card h3 { font-size: 1.25rem; }
+.aside-card h3, .aside-card__title { font-size: 1.25rem; }
 .aside-card--tint { background: var(--brand-tint); }
 .aside-card__icon { width: 2.25rem; height: 2.25rem; color: var(--brand-dark); }
 .aside-card .link-arrow { min-height: 0; }
@@ -169,8 +169,8 @@
 .hours--light > div { border-bottom-color: var(--line); }
 .hours--light dd { color: var(--ink); font-weight: 600; }
 .today { font-size: var(--fs-small); font-weight: 600; color: var(--brand-dark); }
-.aside-card h3 { display: flex; align-items: center; gap: var(--space-2); }
-.aside-card h3 .icon { color: var(--brand-ink); }
+.aside-card h3, .aside-card__title { display: flex; align-items: center; gap: var(--space-2); }
+.aside-card h3 .icon, .aside-card__title .icon { color: var(--brand-ink); }
 .contact-list { display: grid; gap: var(--space-2); list-style: none; padding: 0; }
 .contact-list a { display: flex; align-items: center; gap: var(--space-3); min-height: 2.75rem; color: var(--ink); text-decoration: none; }
 .contact-list a:hover span { text-decoration: underline; }

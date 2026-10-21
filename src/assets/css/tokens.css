@@ -19,7 +19,7 @@
  * Contrast (WCAG AA): wit op --brand-primary = 1.61:1 (onvoldoende) → op merkkleur
  * altijd donkere tekst (--ink: 10.28:1). Wit op --brand-dark = 12.56:1, primary op
  * --brand-dark = 7.79:1. Voor geelgouden tekst op wit --brand-ink (5.32:1).
- * --ink-muted op --surface-alt = 4.42:1: alleen voor grote koppen (≥ 24px).
+ * --ink-muted haalt AA (≥ 4.9:1) op wit, --brand-tint en --surface-alt (QA fase 6).
  */
 :root {
   /* Merk */
@@ -32,7 +32,7 @@
 
   /* Neutraal */
   --ink:             #1b1f24; /* tekst */
-  --ink-muted:       #6b7280; /* tweede tint in tweekleurige koppen */
+  --ink-muted:       #646b77; /* tweede tint in tweekleurige koppen; ≥ 4.9:1 op wit, tint en surface-alt */
   --ink-inverse:     #ffffff;
   --ink-inverse-muted: #c5d3c9; /* tekst op --brand-dark */
   --surface:         #ffffff;
