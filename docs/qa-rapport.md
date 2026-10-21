@@ -90,7 +90,8 @@ piek in blokkeertijd (710 ms) op de testcomputer, niet door de site (de site geb
 
 Lighthouse op https://kampeermeer-preview.netlify.app (alle 16 pagina's, mobiel + desktop):
 performance 95–100 (mobiel) en 100 (desktop), accessibility 100, SEO 100 (bedankt/404: 66, noindex).
-Best practices 93 door de "Built with Netlify"-badge: Netlify injecteert dat script op gratis sites,
-onze CSP blokkeert het (badge verschijnt niet) en dat geeft een consolefout. Oplossing: badge uitzetten
-in de Netlify-instellingen. CSS wordt sinds deze fase geminificeerd (52 → 42 KB).
+Best practices was eerst 93 door de "Built with Netlify"-badge (door Netlify geïnjecteerd script,
+geblokkeerd door onze CSP → consolefout). Badge is uitgezet: best practices nu 100, console schoon.
+Homepage mobiel na herdeploy: 99 / 100 / 100 in drie metingen (eerste meting direct na deploy: 72,
+koude CDN-cache). CSS wordt sinds deze fase geminificeerd (52 → 42 KB).
 

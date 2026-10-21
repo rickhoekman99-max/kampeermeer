@@ -4,7 +4,8 @@
 - Site: **kampeermeer-preview** · https://kampeermeer-preview.netlify.app
 - Beheer: https://app.netlify.com/projects/kampeermeer-preview
 - Handmatig publiceren vanuit deze map: `netlify deploy --build --prod`
-- Openbaar (Netlify-login uitgezet) en formulierdetectie aan; alle 4 formulieren herkend.
+- Openbaar (Netlify-login uitgezet), formulierdetectie aan (alle 4 formulieren herkend),
+  "Built with Netlify"-badge uit (botste met de CSP).
 - Nog niet gekoppeld aan GitHub: automatisch publiceren bij elke push kan via
   Project configuration → Build & deploy → Link repository (branch `redesign` of later `main`).
 
