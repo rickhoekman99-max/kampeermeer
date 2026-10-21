@@ -193,13 +193,6 @@
   color: var(--ink);
 }
 .eyebrow::before { content: "/"; color: var(--brand-ink); font-weight: 700; }
-.eyebrow--pill {
-  padding: var(--space-1) var(--space-4);
-  border: 1px solid var(--line); border-radius: var(--radius-pill);
-  background: var(--surface);
-}
-.eyebrow--icon::before { content: none; }
-.eyebrow--icon .icon { width: 1rem; height: 1rem; color: var(--brand-ink); }
 .on-dark .eyebrow { color: var(--ink-inverse); }
 .on-dark .eyebrow::before { color: var(--brand-primary); }
 
