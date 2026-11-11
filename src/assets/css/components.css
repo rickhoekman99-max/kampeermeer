@@ -368,7 +368,7 @@
 .trio-card--dark .trio-card__icon { color: var(--brand-primary); }
 .trio-card p { color: inherit; opacity: 0.85; }
 .trio-card h3 a { color: inherit; text-decoration: none; }
-.trio-card h3 a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.trio-card h3 a::after { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: inherit; } /* boven de tekst (opacity maakt een eigen laag), hele kaart klikbaar */
 /* Uitgesneden hoek met pil (Biztop) */
 .trio-card__notch {
   position: absolute; left: 0; bottom: 0;
