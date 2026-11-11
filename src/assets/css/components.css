@@ -533,17 +533,17 @@
 .marks { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-5); }
 .marks > li { display: flex; align-items: center; }
 .marks > li + li { padding-left: var(--space-5); border-left: 1px solid var(--line); }
-.mark-ph {
-  display: grid; place-items: center;
-  min-width: 6.5rem; height: 3.25rem; padding: 0 var(--space-4);
-  border: 1.5px dashed #c8ccc6; border-radius: 10px;
-  font-size: var(--fs-label); font-weight: 700; letter-spacing: 0.06em; color: #5b6360;
-}
+.mark { display: block; width: auto; max-width: none; }
+.mark--bovag { height: 3.5rem; }
+.mark--rdw { height: 2.6rem; }
+.mark--campingaz { height: 1.85rem; }
 
 @media (max-width: 479px) {
   .marks { gap: var(--space-3); flex-wrap: nowrap; }
   .marks > li + li { padding-left: var(--space-3); }
-  .mark-ph { min-width: 0; padding: 0 var(--space-3); height: 2.75rem; }
+  .mark--bovag { height: 2.4rem; }
+  .mark--rdw { height: 1.6rem; }
+  .mark--campingaz { height: 1.1rem; }
 }
 
 /* ============ 16. CTA-band ============ */
@@ -576,6 +576,16 @@
 @media (min-width: 1024px) { .site-footer__grid { grid-template-columns: 1.4fr 0.8fr 1.1fr 1.1fr; } }
 .site-footer__brand img { width: 220px; height: auto; margin-bottom: var(--space-5); }
 .site-footer__brand p { max-width: 32ch; }
+.site-footer .footer-bovag {
+  display: inline-flex; align-items: center; gap: var(--space-3);
+  margin-top: var(--space-5);
+  font-size: var(--fs-small); line-height: 1.35;
+}
+.site-footer .footer-bovag:hover { text-decoration: none; }
+.site-footer .footer-bovag:hover strong { text-decoration: underline; }
+.site-footer__brand .footer-bovag img { width: auto; height: 2.75rem; margin: 0; flex: none; }
+.footer-bovag span { display: grid; max-width: 22ch; color: rgb(255 255 255 / 0.75); }
+.footer-bovag strong { color: var(--ink-inverse); font-weight: 600; }
 .site-footer__social { display: flex; gap: var(--space-3); margin-top: var(--space-5); }
 .site-footer__social a {
   display: grid; place-items: center; width: 2.75rem; height: 2.75rem;
