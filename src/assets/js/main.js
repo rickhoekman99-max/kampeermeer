@@ -90,6 +90,47 @@
     });
   }
 
+  /* --- Kleine planners → groot afspraakformulier ---
+     Naam, telefoon en kenteken gaan via sessionStorage mee (niet in de URL, om persoonsgegevens
+     uit logs en statistieken te houden); de dienst gaat als ?dienst= mee. Zonder JavaScript
+     opent de knop gewoon het afspraakformulier met de gekozen dienst. */
+  var PLANNER_KEY = 'km-planner';
+  document.querySelectorAll('form[data-planner]').forEach(function (form) {
+    form.addEventListener('submit', function () {
+      var data = {};
+      form.querySelectorAll('[data-planner-veld]').forEach(function (veld) {
+        if (veld.value.trim()) data[veld.getAttribute('data-planner-veld')] = veld.value.trim();
+      });
+      try { sessionStorage.setItem(PLANNER_KEY, JSON.stringify(data)); } catch (e) { /* geen opslag: alleen de dienst gaat mee */ }
+      var dienstVeld = form.querySelector('select[name="dienst"]');
+      if (dienstVeld && !dienstVeld.value) dienstVeld.disabled = true; // geen lege ?dienst= in de URL
+    });
+  });
+
+  // Terug via de browserknop: keuzelijst weer bruikbaar maken
+  window.addEventListener('pageshow', function () {
+    document.querySelectorAll('form[data-planner] select[name="dienst"]').forEach(function (sel) { sel.disabled = false; });
+  });
+
+  var afspraak = document.querySelector('form[name="afspraak"]');
+  if (afspraak) {
+    var meegenomen = null;
+    try {
+      meegenomen = JSON.parse(sessionStorage.getItem(PLANNER_KEY) || 'null');
+      sessionStorage.removeItem(PLANNER_KEY);
+    } catch (e) { meegenomen = null; }
+    if (meegenomen) {
+      Object.keys(meegenomen).forEach(function (naam) {
+        var veld = afspraak.querySelector('[name="' + CSS.escape(naam) + '"]');
+        if (veld && !veld.value) veld.value = meegenomen[naam];
+      });
+      // Verder waar de bezoeker gebleven is: het eerste lege verplichte veld
+      var leeg = Array.prototype.find.call(afspraak.querySelectorAll('input[required]:not([type="radio"]):not([type="checkbox"]), select[required]'),
+        function (veld) { return !veld.value; });
+      if (leeg) leeg.focus({ preventScroll: false });
+    }
+  }
+
   /* --- Verhuur: product voorselecteren via de knop Reserveren --- */
   document.querySelectorAll('[data-product]').forEach(function (btn) {
     btn.addEventListener('click', function () {

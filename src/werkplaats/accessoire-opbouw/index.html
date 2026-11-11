@@ -42,15 +42,12 @@
         </div>
       </div>
 
-      <form class="request-card" name="aanvraag" method="POST" action="/api/formulier">
+      <form class="request-card" method="get" action="/afspraak/" data-planner>
         <h2>Plan uw afspraak</h2>
-        <input type="hidden" name="formulier" value="aanvraag">
-        <input type="hidden" name="pagina" value="Accessoire-opbouw">
-        <p class="hp"><label>Laat dit veld leeg <input name="website" tabindex="-1" autocomplete="off"></label></p>
-        <div class="field"><label for="aanvraag-naam">Naam</label><input id="aanvraag-naam" name="naam" autocomplete="name" required></div>
+        <div class="field"><label for="aanvraag-naam">Naam</label><input id="aanvraag-naam" data-planner-veld="naam" autocomplete="name"></div>
         <div class="field-grid field-grid--2">
-          <div class="field"><label for="aanvraag-tel">Telefoon</label><input id="aanvraag-tel" name="telefoon" type="tel" autocomplete="tel" required></div>
-          <div class="field"><label for="aanvraag-kenteken">Kenteken</label><input id="aanvraag-kenteken" name="kenteken" autocomplete="off"></div>
+          <div class="field"><label for="aanvraag-tel">Telefoon</label><input id="aanvraag-tel" data-planner-veld="telefoon" type="tel" autocomplete="tel"></div>
+          <div class="field"><label for="aanvraag-kenteken">Kenteken</label><input id="aanvraag-kenteken" data-planner-veld="kenteken" autocomplete="off"></div>
         </div>
         <div class="field">
           <label for="aanvraag-dienst">Dienst</label>
@@ -66,7 +63,6 @@
           </select>
         </div>
         <button class="btn btn--accent btn--block" type="submit">Vraag afspraak aan</button>
-        <p class="request-card__alt">Liever uitgebreid plannen? <a href="/afspraak/?dienst=accessoire-opbouw">Ga naar het afsprakenformulier</a></p>
       </form>
     </div>
   </section>

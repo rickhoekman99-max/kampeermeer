@@ -1,7 +1,9 @@
 # Formulieren (Cloudflare Pages Function + Resend)
 
-Alle formulieren op de site (`aanvraag` op werkplaats- en dienstpagina's, `afspraak`, `reservering`,
-`contact`) posten naar **`/api/formulier`**. Dat is een Cloudflare Pages Function
+Alle formulieren op de site (`afspraak`, `reservering`, `contact`) posten naar **`/api/formulier`**.
+De kleine planners op de werkplaats- en dienstpagina's versturen zelf niets: de gele knop opent
+`/afspraak/` met de gekozen dienst (`?dienst=`) en neemt naam, telefoon en kenteken mee via
+`sessionStorage` (niet in de URL), waarna ze in het grote formulier ingevuld staan (`src/assets/js/main.js`). Dat is een Cloudflare Pages Function
 (`functions/api/formulier.js`) die:
 
 1. controleert of het een bekend formulier is en of de verplichte velden zijn ingevuld;

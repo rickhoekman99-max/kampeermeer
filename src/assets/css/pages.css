@@ -63,7 +63,6 @@
 .aside-card__icon { width: 2.25rem; height: 2.25rem; color: var(--brand-dark); }
 .aside-card .link-arrow { min-height: 0; }
 
-.request-card__alt { margin-top: var(--space-4); text-align: center; font-size: var(--fs-small); color: var(--ink-muted); }
 
 @media (min-width: 900px) { .services--three { grid-template-columns: repeat(3, 1fr); } }
 .split-head .link-arrow { justify-self: start; }
@@ -185,15 +184,15 @@
 .branch-card__media img { width: 100%; height: 100%; object-fit: cover; }
 .branch-card__body { display: grid; gap: var(--space-4); padding: clamp(1.5rem, 3vw, 2rem); flex: 1; align-content: start; }
 .branch-card__body h3 { font-size: 1.5rem; }
-.branch-card__body .btn { justify-self: start; margin-top: var(--space-2); }
-.map-card { position: relative; display: block; aspect-ratio: 4 / 3; border-radius: var(--radius-card); overflow: hidden; }
-.map-card img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--dur) var(--ease); }
-.map-card:hover img { transform: scale(1.03); }
-.map-card__label {
-  position: absolute; left: var(--space-4); bottom: var(--space-4);
-  display: inline-flex; align-items: center; gap: var(--space-2);
-  padding: var(--space-2) var(--space-4); border-radius: var(--radius-pill);
-  background: var(--surface); color: var(--ink); font-weight: 600; font-size: var(--fs-small);
+.branch-card__body .btn { justify-self: start; }
+.branch-card__address { font-size: 1.125rem; }
+.branch-card__note { color: var(--ink-muted); font-size: var(--fs-small); margin-top: var(--space-1); }
+.branch-card__actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3) var(--space-5); margin-top: var(--space-2); }
+@media (min-width: 900px) {
+  .branch-card--wide { display: grid; grid-template-columns: 1.15fr 1fr; }
+  .branch-card--wide .branch-card__media { position: relative; aspect-ratio: auto; min-height: 24rem; }
+  .branch-card--wide .branch-card__media img { position: absolute; inset: 0; }
+  .branch-card--wide .branch-card__body { padding: clamp(2rem, 4vw, 3rem); align-content: center; }
 }
 
 /* ============ Tekstpagina's ============ */

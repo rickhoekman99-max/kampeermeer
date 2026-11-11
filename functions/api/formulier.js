@@ -1,7 +1,7 @@
 /*
  * Cloudflare Pages Function: POST /api/formulier
  *
- * Ontvangt de formulieren van de site (aanvraag, afspraak, reservering, contact), controleert ze
+ * Ontvangt de formulieren van de site (afspraak, reservering, contact), controleert ze
  * en stuurt de inhoud als e-mail naar Kampeer & Meer via de maildienst Resend.
  *
  * Omgevingsvariabelen (Cloudflare Pages → Settings → Variables and Secrets):
@@ -15,11 +15,6 @@
  */
 
 const FORMULIEREN = {
-  aanvraag: {
-    onderwerp: 'Afspraakaanvraag',
-    velden: { pagina: 'Pagina', naam: 'Naam', telefoon: 'Telefoon', kenteken: 'Kenteken', dienst: 'Dienst' },
-    verplicht: ['naam', 'telefoon'],
-  },
   afspraak: {
     onderwerp: 'Afspraakverzoek',
     velden: {
