@@ -18,6 +18,8 @@ gebouwd met een klein buildscript zonder dependencies.
 - Redirects en headers staan in `src/_redirects` en `src/_headers` (Cloudflare Pages-formaat; komen via de
   build in `dist/`).
 - Bezoekersstatistieken: Cloudflare Web Analytics (script in `src/partials/footer.html`, zonder cookies).
+- Google Search Console: property `https://www.kampeermeer.com/` (account rickhoekman99@gmail.com), geverifieerd
+  met de metatag `google-site-verification` in `src/partials/head.html` (laten staan), sitemap ingediend.
 
 ### Zo werkt deployen
 1. Wijzig de site (lokaal of via Claude Code) en controleer met `node build.js`.
