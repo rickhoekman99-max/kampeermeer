@@ -84,7 +84,7 @@ piek in blokkeertijd (710 ms) op de testcomputer, niet door de site (de site geb
 3. Afspraakformulier blijft een aanvraag per e-mail (geen koppeling met de planner). Akkoord?
 4. Licentie AdobeStock-foto (hero) controleren voor webgebruik.
 5. Echte BOVAG- en Campingaz-logo's aanleveren (nu placeholders in de keurmerkenrij).
-6. Netlify-instellingen voor formuliermeldingen: zie `docs/netlify.md`.
+6. Formuliermeldingen: zie `docs/formulieren.md` (Cloudflare Pages Function + Resend; de site draait inmiddels op Cloudflare Pages).
 
 ## Meting op de echte preview (fase 7)
 
