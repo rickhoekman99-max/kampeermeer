@@ -1,0 +1,35 @@
+# Cloudflare Pages-headers. Regels die op hetzelfde pad matchen worden samengevoegd.
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Strict-Transport-Security: max-age=31536000
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
+
+# Fonts veranderen niet: een jaar cachen.
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Foto's en iconen: 30 dagen.
+/assets/img/*
+  Cache-Control: public, max-age=2592000
+/assets/icons/*
+  Cache-Control: public, max-age=2592000
+/assets/logo/*
+  Cache-Control: public, max-age=2592000
+
+# CSS en JS hebben geen versienummer in de naam: kort cachen, daarna opnieuw controleren.
+/assets/css/*
+  Cache-Control: public, max-age=3600, must-revalidate
+/assets/js/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/site.webmanifest
+  Content-Type: application/manifest+json
+
+/afspraak/bedankt/*
+  X-Robots-Tag: noindex
+/styleguide/*
+  X-Robots-Tag: noindex, nofollow

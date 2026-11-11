@@ -3,4 +3,4 @@ Allow: /
 Disallow: /styleguide/
 Disallow: /afspraak/bedankt/
 
-Sitemap: https://kampeermeer.com/sitemap.xml
+Sitemap: https://www.kampeermeer.com/sitemap.xml

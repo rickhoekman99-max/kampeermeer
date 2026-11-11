@@ -67,7 +67,7 @@ function inlineSprite(html) {
     .replace(/<body([^>]*)>/, (m) => `${m}\n${sprite.trim()}`);
 }
 
-const SITE = 'https://kampeermeer.com';
+const SITE = 'https://www.kampeermeer.com';
 
 function breadcrumbJsonLd(html, url) {
   const nav = html.match(/<nav class="crumbs"[\s\S]*?<\/nav>/);
