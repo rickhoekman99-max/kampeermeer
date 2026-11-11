@@ -33,3 +33,6 @@
   X-Robots-Tag: noindex
 /styleguide/*
   X-Robots-Tag: noindex, nofollow
+
+/formulier-fout/*
+  X-Robots-Tag: noindex

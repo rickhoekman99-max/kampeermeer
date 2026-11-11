@@ -151,8 +151,8 @@
         <h2 id="reserveren-title">Reserveer uw dakkoffer of fietsendrager</h2>
         <p>Vul het formulier in, dan nemen wij contact met u op om de reservering te bevestigen. Liever direct overleggen? Bel <a href="tel:+31113405050">0113-40 50 50</a> of stuur een <a href="https://wa.me/31113382810" rel="noopener">WhatsApp-bericht</a>.</p>
       </div>
-      <form class="form-card" name="reservering" method="POST" action="/afspraak/bedankt/" data-netlify="true" netlify-honeypot="website" data-reveal>
-          <input type="hidden" name="form-name" value="reservering">
+      <form class="form-card" name="reservering" method="POST" action="/api/formulier" data-reveal>
+          <input type="hidden" name="formulier" value="reservering">
           <p class="hp"><label>Laat dit veld leeg <input name="website" tabindex="-1" autocomplete="off"></label></p>
           <div class="field">
             <label for="res-product">Product</label>

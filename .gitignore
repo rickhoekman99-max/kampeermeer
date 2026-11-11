@@ -4,3 +4,4 @@ node_modules/
 .claude/launch.json
 dev-preview.sh
 .netlify/
+.wrangler/
