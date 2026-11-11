@@ -1,0 +1,10 @@
+# Cloudflare Pages-redirects (alleen paden; het kale domein -> www regelen we bij Hostnet).
+# Oude URL's van de Autosociaal-site -> nieuwe pagina's.
+/afspraak-maken             /afspraak/              301
+/afspraak-maken/            /afspraak/              301
+/afspraak/details           /afspraak/              301
+/afspraak/details/*         /afspraak/              301
+/contact/vestigingen/265    /contact/#kampeermeer   301
+/contact/vestigingen/265/   /contact/#kampeermeer   301
+/contact/vestigingen/451    /contact/#lokerse       301
+/contact/vestigingen/451/   /contact/#lokerse       301

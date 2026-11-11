@@ -1,0 +1,85 @@
+/*
+ * Design tokens — kampeermeer.com
+ *
+ * Merkkleuren gemeten op de live site (fase 0, 21-10-2026):
+ *   --color-accent / knoppen / actief menu-item ....... rgba(226,187,32)  = #E2BB20
+ *   --color-accent-dark / secundaire knop ............. rgba(255,226,111) = #FFE26F
+ *   tekst / navigatie ................................. rgb(16,16,16)     = #101010
+ *   footer-achtergrond ................................ rgb(235,235,235)  = #EBEBEB
+ *
+ * Vectorlogo (LOGO zonder achtergrond.pdf, Illustrator):
+ *   tent en "&" ....................................... #DBB926
+ *   woordmerk ......................................... #262324
+ *   slogan "Home is where you park it" ................ #095E34 (donkergroen)
+ *
+ * Feedback Rick (fase 0): primary iets warmer, minder goud, meer zomers.
+ * Gekozen door Rick: C "zomergeel" #F7C548 (tint 43° i.p.v. 48°).
+ * Donker: groen uit de slogan.
+ *
+ * Contrast (WCAG AA): wit op --brand-primary = 1.61:1 (onvoldoende) → op merkkleur
+ * altijd donkere tekst (--ink: 10.28:1). Wit op --brand-dark = 12.56:1, primary op
+ * --brand-dark = 7.79:1. Voor geelgouden tekst op wit --brand-ink (5.32:1).
+ * --ink-muted haalt AA (≥ 4.9:1) op wit, --brand-tint en --surface-alt (QA fase 6).
+ */
+:root {
+  /* Merk */
+  --brand-primary:   #f7c548; /* zomergeel: knoppen, accenten, actief menu-item */
+  --brand-secondary: #095e34; /* groen uit de logo-slogan */
+  --brand-dark:      #0e3b26; /* diep groen, afgeleid van de slogan: donkere kaarten, footer, CTA */
+  --brand-tint:      #fef6dd; /* zeer lichte zomertint: statistiekkaarten, kaartachtergronden */
+  --brand-ink:       #8a6508; /* donker geelgoud: accenttekst/links op wit */
+  --logo-gold:       #dbb926; /* exacte logokleur, alleen voor het logo zelf */
+
+  /* Neutraal */
+  --ink:             #1b1f24; /* tekst */
+  --ink-muted:       #646b77; /* tweede tint in tweekleurige koppen; ≥ 4.9:1 op wit, tint en surface-alt */
+  --ink-inverse:     #ffffff;
+  --ink-inverse-muted: #c5d3c9; /* tekst op --brand-dark */
+  --surface:         #ffffff;
+  --surface-alt:     #f4f5f2; /* sectie-achtergrond, warm lichtgrijs */
+  --line:            #e5e7eb;
+
+  /* Typografie */
+  --font-sans:    "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Inter Tight", "Inter", system-ui, sans-serif;
+  --font-serif:   "Fraunces", Georgia, "Times New Roman", serif;
+
+  --fs-body:  clamp(1.0625rem, 1rem + 0.2vw, 1.125rem); /* min. 17px */
+  --fs-small: 0.9375rem;
+  --fs-label: 0.8125rem;
+  --fs-h3:    clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --fs-h2:    clamp(1.875rem, 1.4rem + 2vw, 3rem);
+  --fs-h1:    clamp(2.25rem, 1.6rem + 3vw, 4rem);
+  --fs-stat:  clamp(2.5rem, 2rem + 2.5vw, 4rem);
+  --fs-wordmark: clamp(3.5rem, 15vw, 13rem);
+  --lh-body:  1.6;
+  --lh-tight: 1.1;
+  --tracking-tight: -0.02em;
+
+  /* Ruimte */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --section-pad: clamp(4rem, 9vw, 8rem);
+  --gutter: clamp(1rem, 4vw, 2rem);
+  --content-max: 1240px;
+
+  /* Vorm */
+  --radius-card: 20px;
+  --radius-hero: 28px;
+  --radius-pill: 999px;
+  --shadow-soft: 0 10px 30px -12px rgb(28 26 20 / 0.18);
+
+  /* Beweging */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur: 220ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur: 0ms; }
+}
