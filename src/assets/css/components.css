@@ -375,6 +375,7 @@
   padding: 10px 12px 0 0;
   background: var(--notch-bg);
   border-top-right-radius: 22px;
+  pointer-events: none; /* klik valt door naar de kaartlink (h3 a::after) */
 }
 .trio-card__notch::before, .trio-card__notch::after {
   content: ""; position: absolute; width: 22px; height: 22px;
